@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   ],
   declarations: [],
 })
-export class ConstantsModule {
+export class Constants {
 
   public static readonly LANGUAGES = {
     DEAFAULT: 'en',
@@ -29,4 +29,9 @@ export class ConstantsModule {
   public static readonly STORAGE_KEYS = {
     ADMIN_KEY: '',
   };
+
+  public static readonly CONTACTS = {
+    TEL_MAIN: '(050) 123 45 67',
+  };
+
 }
