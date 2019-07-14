@@ -1,0 +1,11 @@
+@import '../../../assets/themes/containers';
+@import '../../../assets/themes/variables';
+
+
+.header-top {
+  @extend .row-spc-btwn-cntr;
+  background-color: $color-main-1;
+  width: inherit;
+  color: $color-main-2;
+  padding: 5px;
+}

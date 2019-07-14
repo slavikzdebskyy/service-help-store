@@ -1,0 +1,7 @@
+@import './variables';
+@import './containers';
+
+header {
+  @extend .col-spc-btwn-cntr;
+  width: 100%;
+}
