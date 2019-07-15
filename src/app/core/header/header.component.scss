@@ -1,11 +1,63 @@
 @import '../../../assets/themes/containers';
 @import '../../../assets/themes/variables';
 
-
 .header-top {
   @extend .row-spc-btwn-cntr;
   background-color: $color-main-1;
   width: inherit;
   color: $color-main-2;
-  padding: 5px;
+  padding: 10px 0;
+  font-size: 14px;
 }
+
+.fas, .far {
+  color: $color-main-3;
+  font-size: 10px;
+  margin-right: 8px;
+}
+
+.info-item {
+  color: $color-main-2;
+  font-size: 12px;
+  transition: all 0.3s;
+  cursor: pointer;
+  padding: 5px 10px;
+  &:hover {
+    color: $color-main-3;
+  }
+}
+
+.link-info {
+  text-decoration: none;
+  @extend .info-item;
+  padding: 0;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: $break-medium) {
+  .contacts-info {
+    display: none;
+  }
+
+  .header-top {
+    padding: 15px 0;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .fa-bars {
+    color: $color-main-2;
+    font-size: 12px;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      color: $color-main-3;
+    }
+  }
+
+};

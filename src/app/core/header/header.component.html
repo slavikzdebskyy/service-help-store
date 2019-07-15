@@ -1,11 +1,59 @@
 <header>
   <div class="header-top">
+    <span
+      class="info-item mobile-menu"
+      (click)="onOpenSideNav()">
+        <i class="fas fa-bars"></i>
+    </span>
     <div class="contacts-info">
-      <span>
+      <span class="info-item">
         <i class="fas fa-phone"></i>
-        {{ 'CONTACTS.main_phone_number' | translate }}
+        <a
+          class="link-info"
+          [href]="constants.MAIN_PHONE_NUMBER">
+            {{ 'CONTACTS.main_phone_number' | translate }}
+        </a>
+      </span>
+      <span class="info-item">
+        <i class="far fa-envelope"></i>
+        <a
+          class="link-info"
+          [href]="constants.MAIN_EMAIL">
+            {{ 'CONTACTS.main_email' | translate }}
+        </a>
+      </span>
+      <span class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <a
+          class="link-info"
+          [href]="constants.MAIN_EMAIL">
+            {{ 'CONTACTS.location' | translate }}
+        </a>
       </span>
     </div>
-
+    <div class="acount-language">
+      <span
+        [matMenuTriggerFor]="language"
+        class="info-item"
+      >
+        <i class="fas fa-globe-americas"></i>
+        {{ 'PROFILE.language' | translate }}
+      </span>
+      <mat-menu #language="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+      <span
+      [matMenuTriggerFor]="profile"
+      class="info-item"
+    >
+      <i class="far fa-user"></i>
+      {{ 'PROFILE.my_profile' | translate }}
+    </span>
+    <mat-menu #profile="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+    </div>
   </div>
 </header>

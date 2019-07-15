@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
   //  Modules
+import { MaterialModule } from '../modules/material/material.module';
 import { CoreRoutingModule } from './core-routing.module';
 
   //  Components
@@ -15,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
     CommonModule,
     CoreRoutingModule,
     TranslateModule,
+    MaterialModule,
   ],
   declarations: [
     LayoutComponent,

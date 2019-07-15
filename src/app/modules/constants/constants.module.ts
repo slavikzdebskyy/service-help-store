@@ -9,6 +9,9 @@ import { CommonModule } from '@angular/common';
 })
 export class Constants {
 
+  public static readonly MAIN_PHONE_NUMBER = 'tel:+380501234567';
+  public static readonly MAIN_EMAIL = 'mailto:qaz@qaz.com';
+
   public static readonly LANGUAGES = {
     DEAFAULT: 'en',
   };
