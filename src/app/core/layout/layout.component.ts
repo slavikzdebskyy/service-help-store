@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
+  isSideNavOpened = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  public toggleSideNav(event?: boolean): void {
+    this.isSideNavOpened = event || false;
+  }
 }

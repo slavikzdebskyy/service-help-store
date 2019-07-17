@@ -1,11 +1,116 @@
 <header>
   <div class="header-top">
+    <span
+      class="info-item mobile-menu"
+      (click)="onOpenSideNav()">
+        <i class="fas fa-bars"></i>
+    </span>
     <div class="contacts-info">
-      <span>
+      <span class="info-item">
         <i class="fas fa-phone"></i>
-        {{ 'CONTACTS.main_phone_number' | translate }}
+        <a
+          class="link-info"
+          [href]="constants.MAIN_PHONE_NUMBER">
+            {{ 'CONTACTS.main_phone_number' | translate }}
+        </a>
+      </span>
+      <span class="info-item">
+        <i class="far fa-envelope"></i>
+        <a
+          class="link-info"
+          [href]="constants.MAIN_EMAIL">
+            {{ 'CONTACTS.main_email' | translate }}
+        </a>
+      </span>
+      <span class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <a
+          class="link-info"
+          [href]="constants.MAIN_EMAIL">
+            {{ 'CONTACTS.location' | translate }}
+        </a>
       </span>
     </div>
-
+    <div class="acount-language">
+      <span
+        [matMenuTriggerFor]="language"
+        class="info-item"
+      >
+        <i class="fas fa-globe-americas"></i>
+        {{ 'PROFILE.language' | translate }}
+      </span>
+      <mat-menu #language="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+      <span
+      [matMenuTriggerFor]="profile"
+      class="info-item"
+    >
+      <i class="far fa-user"></i>
+      {{ 'PROFILE.my_profile' | translate }}
+    </span>
+    <mat-menu #profile="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <img class="logo" src="../../../assets/images/logo.png" alt="logo">
+    <form
+    [formGroup]="searchForm"
+    (ngSubmit)="onSearch()"
+    class="search-form"
+    >
+      <select
+      formControlName="category"
+      class="cat-select">
+        <option
+          *ngFor="let category of constants.CATEGORIES"
+          [value]="category.name"
+         >
+          {{ category.translateKey | translate }}
+        </option>
+      </select>
+      <input
+        type="text"
+        class="search"
+        placeholder="{{ 'SEARCH.search_ph' | translate }}"
+        formControlName="searchKey"
+        >
+        <button
+          class="search-btn"
+          type="submit"
+        >
+          {{ 'SEARCH.search' | translate }}
+        </button>
+    </form>
+    <div class="basket-wish-list">
+      <div class="basket-item">
+        <i class="far fa-heart"></i>
+        <span class="basket-item-txt">
+          {{ 'SEARCH.your_wishlist' | translate }}
+        </span>
+        <span
+          class="counter wl-count"
+          *ngIf="wishListCount"
+        >
+          {{ wishListCount }}
+        </span>
+      </div>
+      <div class="basket-item">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="basket-item-txt">
+          {{ 'SEARCH.your_cart' | translate }}
+        </span>
+        <span
+          class="counter"
+          *ngIf="cartCout"
+        >
+          {{ cartCout }}
+        </span>
+      </div>
+    </div>
   </div>
 </header>
