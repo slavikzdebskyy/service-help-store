@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatMenuModule } from '@angular/material/menu';
 import { HeaderComponent } from './header.component';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -10,7 +12,12 @@ describe('HeaderComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [HeaderComponent],
-      imports: [TranslateModule.forRoot()],
+      imports: [
+        TranslateModule.forRoot(),
+        FormsModule,
+        ReactiveFormsModule,
+        MatMenuModule,
+      ],
     })
     .compileComponents();
   }));
