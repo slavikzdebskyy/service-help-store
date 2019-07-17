@@ -37,4 +37,12 @@ export class Constants {
     TEL_MAIN: '(050) 123 45 67',
   };
 
+  public static readonly CATEGORIES = [
+    { name: 'All Categories', translateKey: 'CATEGORIES.all_categories' },
+    { name: 'Servers', translateKey: 'CATEGORIES.servers' },
+    { name: 'PC', translateKey: 'CATEGORIES.pc' },
+    { name: 'Laptops', translateKey: 'CATEGORIES.laptops' },
+    { name: 'Monitors', translateKey: 'CATEGORIES.monitors' },
+  ];
+
 }

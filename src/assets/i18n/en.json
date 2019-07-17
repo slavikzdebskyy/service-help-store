@@ -7,5 +7,19 @@
   "PROFILE": {
     "language": "Language",
     "my_profile": "My profile"
+  },
+  "SEARCH": {
+    "search_ph": "Search ...",
+    "search": "Search",
+    "your_wishlist": "Your Wishlist",
+    "your_cart": "Your Cart"
+  },
+  "CATEGORIES": {
+    "select_category": "Select category",
+    "all_categories": "All Categories",
+    "servers": "Servers",
+    "pc": "PC",
+    "laptops": "Laptops",
+    "monitors": "Monitors"
   }
 }

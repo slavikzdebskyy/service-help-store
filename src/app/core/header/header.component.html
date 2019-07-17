@@ -56,4 +56,61 @@
     </mat-menu>
     </div>
   </div>
+  <div class="header-bottom">
+    <img class="logo" src="../../../assets/images/logo.png" alt="logo">
+    <form
+    [formGroup]="searchForm"
+    (ngSubmit)="onSearch()"
+    class="search-form"
+    >
+      <select
+      formControlName="category"
+      class="cat-select">
+        <option
+          *ngFor="let category of constants.CATEGORIES"
+          [value]="category.name"
+         >
+          {{ category.translateKey | translate }}
+        </option>
+      </select>
+      <input
+        type="text"
+        class="search"
+        placeholder="{{ 'SEARCH.search_ph' | translate }}"
+        formControlName="searchKey"
+        >
+        <button
+          class="search-btn"
+          type="submit"
+        >
+          {{ 'SEARCH.search' | translate }}
+        </button>
+    </form>
+    <div class="basket-wish-list">
+      <div class="basket-item">
+        <i class="far fa-heart"></i>
+        <span class="basket-item-txt">
+          {{ 'SEARCH.your_wishlist' | translate }}
+        </span>
+        <span
+          class="counter wl-count"
+          *ngIf="wishListCount"
+        >
+          {{ wishListCount }}
+        </span>
+      </div>
+      <div class="basket-item">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="basket-item-txt">
+          {{ 'SEARCH.your_cart' | translate }}
+        </span>
+        <span
+          class="counter"
+          *ngIf="cartCout"
+        >
+          {{ cartCout }}
+        </span>
+      </div>
+    </div>
+  </div>
 </header>
