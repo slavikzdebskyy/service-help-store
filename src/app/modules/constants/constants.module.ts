@@ -20,6 +20,7 @@ export class Constants {
     HOME: '',
     LOGIN: 'login',
     REGISTRATION: 'registration',
+    PRODUCT: 'product/:id',
   };
 
   public static readonly ROUTERS_API = {
