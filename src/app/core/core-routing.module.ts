@@ -7,12 +7,12 @@ import { Constants } from './../modules/constants/constants.module';
   //  Components
 import { LayoutComponent } from './layout/layout.component';
 
-const routes: Routes = [
-  {
-    path: Constants.ROUTERS.HOME,
-    component: LayoutComponent,
-  },
-];
+  //  Services
+import { Route } from '../services/router.service';
+
+const routes: Routes = Route.withLayout([
+  // components...
+]);
 
 @NgModule({
   imports: [

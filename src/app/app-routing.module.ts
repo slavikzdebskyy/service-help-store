@@ -6,11 +6,16 @@ import { Constants } from './modules/constants/constants.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { AuthModule } from './auth/auth.module';
+import { LayoutComponent } from './core/layout/layout.component';
 
 const routes: Routes = [
   {
     path: Constants.ROUTERS.HOME,
     loadChildren: './core/core.module#CoreModule',
+  },
+  {
+    path: Constants.ROUTERS.PRODUCT,
+    loadChildren: '../modules/product/product.module#ProductModule',
   },
   {
     path: '**',
