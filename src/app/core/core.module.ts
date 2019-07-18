@@ -8,6 +8,7 @@ import { MaterialModule } from '../modules/material/material.module';
 import { CoreRoutingModule } from './core-routing.module';
 
   //  Components
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -25,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
     LayoutComponent,
     HeaderComponent,
     FooterComponent,
+    NavigationBarComponent,
   ],
 })
 export class CoreModule { }
