@@ -1,9 +1,18 @@
-h2, .title-2 {
+@import './variables';
 
+.info-item {
+  color: $color-main-2;
+  font-size: 12px;
+  transition: 0.3s all;
+  cursor: pointer;
+  padding: 5px 10px;
+  &:hover {
+    color: $color-main-3;
+  }
 }
 
-h3, .title-3 {
-
+.link-info {
+  text-decoration: none;
+  @extend .info-item;
+  padding: 0;
 }
-
-

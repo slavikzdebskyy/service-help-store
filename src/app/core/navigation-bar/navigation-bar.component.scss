@@ -1,0 +1,54 @@
+@import '../../../assets/themes/containers';
+@import '../../../assets/themes/variables';
+
+.nav-bar {
+  width: 100%;
+  @extend .row-spc-btwn-cntr;
+  padding: 0 50px;
+  background: $color-main-2;
+  border-bottom: 2px solid $color-main-5;
+}
+
+.links-list {
+  width: inherit;
+  @extend .row-spc-btwn-cntr;
+  flex: 0.6;
+}
+
+.link-item {
+  color: $color-main-6;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 20px 0;
+  &:after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #D10024;
+    transition: 0.3s all;
+  }
+  &:hover {
+    color: $color-main-3;
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+
+@media screen and (max-width: $break-medium) {
+  .nav-bar {
+    justify-content: space-around;
+    padding: 0 30px;
+  }
+  .links-list {
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: $break-tiny) {
+  .nav-bar {
+    display: none;
+  }
+}

@@ -17,9 +17,11 @@
   "CATEGORIES": {
     "select_category": "Select category",
     "all_categories": "All Categories",
-    "servers": "Servers",
+    "discounts": "Discounts",
     "pc": "PC",
     "laptops": "Laptops",
-    "monitors": "Monitors"
+    "monitors": "Monitors",
+    "home": "Home",
+    "accessories": "Accessories"
   }
 }

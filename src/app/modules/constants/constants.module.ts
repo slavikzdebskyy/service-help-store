@@ -39,10 +39,11 @@ export class Constants {
 
   public static readonly CATEGORIES = [
     { name: 'All Categories', translateKey: 'CATEGORIES.all_categories' },
-    { name: 'Servers', translateKey: 'CATEGORIES.servers' },
+    { name: 'Discounts', translateKey: 'CATEGORIES.discounts' },
     { name: 'PC', translateKey: 'CATEGORIES.pc' },
     { name: 'Laptops', translateKey: 'CATEGORIES.laptops' },
     { name: 'Monitors', translateKey: 'CATEGORIES.monitors' },
+    { name: 'Accessories', translateKey: 'CATEGORIES.accessories' },
   ];
 
 }
