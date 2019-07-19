@@ -6,3 +6,15 @@ header {
   width: 100%;
   font-size: 14px;
 }
+
+.links-list {
+  width: inherit;
+  @extend .row-spc-btwn-cntr;
+  flex: 0.6;
+}
+
+@media screen and (max-width: $break-medium) {
+  .links-list {
+    flex: 1;
+  }
+}

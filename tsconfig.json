@@ -18,7 +18,8 @@
       "dom"
     ],
     "paths": {
-      "@service-help/themes": ["src/assets/themes/"]
+      "@service-help/interfaces": ["src/app/shared/interfaces/index.ts"],
+      "@service-help/components": ["src/app/shared/components/index.ts"]
     }
   }
 }
