@@ -1,5 +1,6 @@
 @import '../../../assets/themes/containers';
 @import '../../../assets/themes/variables';
+@import '../../../assets/themes/base';
 
 .nav-bar {
   width: 100%;
@@ -7,12 +8,6 @@
   padding: 0 50px;
   background: $color-main-2;
   border-bottom: 2px solid $color-main-5;
-}
-
-.links-list {
-  width: inherit;
-  @extend .row-spc-btwn-cntr;
-  flex: 0.6;
 }
 
 .link-item {

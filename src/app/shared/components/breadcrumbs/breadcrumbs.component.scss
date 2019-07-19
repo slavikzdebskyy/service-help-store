@@ -1,0 +1,45 @@
+@import '../../../../assets/themes/variables';
+@import '../../../../assets/themes/containers';
+
+.breadcrumbs-container {
+  @extend .row-spc-btwn-cntr;
+  padding: 30px 50px;
+  width: 100%;
+  background-color: $color-main-7;
+  border-bottom: 1px solid $color-main-5;
+}
+
+.bc-list {
+  width: inherit;
+  @extend .row-spc-btwn-cntr;
+  justify-content: flex-start;
+}
+
+.bc-list-item {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $color-main-8;
+  cursor: pointer;
+  transition: 0.3s all;
+  outline: none;
+  &:hover {
+    color: $color-main-3;
+  }
+  &:not(:first-child):before{
+    content: '/';
+    color: $color-main-8;
+    margin: 10px;
+  }
+  &:last-child {
+    color: $color-main-1;
+    cursor: default;
+  }
+}
+
+
+@media screen and (max-width: $break-tiny) {
+  .breadcrumbs-container {
+    display: none;
+  }
+}
