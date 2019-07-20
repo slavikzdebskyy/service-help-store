@@ -14,6 +14,7 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
     ReactiveFormsModule,
     ProductModule,
     ComponentsModule,
+    RouterModule,
   ],
   declarations: [
     LayoutComponent,

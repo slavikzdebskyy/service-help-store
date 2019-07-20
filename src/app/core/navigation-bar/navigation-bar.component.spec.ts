@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { NavigationBarComponent } from './navigation-bar.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('NavigationBarComponent', () => {
   let component: NavigationBarComponent;
@@ -10,7 +11,10 @@ describe('NavigationBarComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [NavigationBarComponent],
-      imports: [TranslateModule.forRoot()],
+      imports: [
+        TranslateModule.forRoot(),
+        RouterTestingModule,
+      ],
     })
     .compileComponents();
   }));
