@@ -1,31 +1,55 @@
 <nav class="nav-bar">
   <ul class="links-list">
-    <li class="info-item link-item">
+    <li class="info-item link-item"
+        [routerLink]="routes.HOME"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact: true}"
+      >
       <span>
         {{ 'CATEGORIES.home' | translate }}
       </span>
     </li>
-    <li class="info-item link-item">
+    <li class="info-item link-item"
+        [routerLink]="'/' + routes.PRODUCT"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact: true}"
+      >
       <span>
         {{ 'CATEGORIES.laptops' | translate }}
       </span>
     </li>
-    <li class="info-item link-item">
+    <li class="info-item link-item"
+        routerLink="/user/bob"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact: true}"
+      >
       <span>
         {{ 'CATEGORIES.pc' | translate }}
       </span>
     </li>
-    <li class="info-item link-item">
+    <li class="info-item link-item"
+        routerLink="/user/bob"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact: true}"
+      >
       <span>
         {{ 'CATEGORIES.monitors' | translate }}
       </span>
     </li>
-    <li class="info-item link-item">
+    <li class="info-item link-item"
+        routerLink="/user/bob"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact: true}"
+      >
       <span>
         {{ 'CATEGORIES.accessories' | translate }}
       </span>
     </li>
-    <li class="info-item link-item">
+    <li class="info-item link-item"
+        routerLink="/user/bob"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact: true}"
+      >
       <span>
         {{ 'CATEGORIES.discounts' | translate }}
       </span>

@@ -15,6 +15,7 @@
   font-size: 14px;
   cursor: pointer;
   padding: 20px 0;
+  outline: none;
   &:after {
     content: "";
     display: block;
@@ -23,7 +24,8 @@
     background-color: #D10024;
     transition: 0.3s all;
   }
-  &:hover {
+  &:hover,
+  &.active-link {
     color: $color-main-3;
     &:after {
       width: 100%;
