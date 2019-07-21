@@ -1,8 +1,15 @@
 <div class="product-img-container">
   <sh-swiper-slider-mini
-  [images]="images"
-  [isHorizontal]="false"
+    [activeIndex]="ACTIVE_INDEX"
+    [images]="images"
+    [isHorizontal]="false"
+    (changeSlide)="changeSlide($event)"
   ></sh-swiper-slider-mini>
+  <sh-swiper-slider
+    [activeIndex]="ACTIVE_INDEX"
+    [images]="images"
+    (changeSlide)="changeSlide($event)"
+  ></sh-swiper-slider>
 </div>
 
 

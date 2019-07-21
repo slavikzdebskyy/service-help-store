@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SliderActions } from 'src/app/shared/enums/slider-actions.enum';
 
 @Component({
   selector: 'sh-product-images',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductImagesComponent implements OnInit {
 
-  images: string[];
+  public images: string[];
+  private actions = SliderActions;
+  public readonly ACTIVE_INDEX = 1;
 
   constructor() { }
 
@@ -22,6 +25,27 @@ export class ProductImagesComponent implements OnInit {
       'https://i1.rozetka.ua/goods/12531253/95236360_images_12531253312.jpg',
       'https://i1.rozetka.ua/goods/12531253/95236360_images_12531253852.jpg',
     ];
+  }
+
+  private prevSlide(): void {
+    const last = this.images[this.images.length - 1];
+    this.images.pop();
+    this.images.unshift(last);
+  }
+
+  private nextSlide(): void {
+    const first = this.images[0];
+    this.images.shift();
+    this.images.push(first);
+  }
+
+  public changeSlide(action: SliderActions): void {
+    if (action === this.actions.prev) {
+      this.prevSlide();
+    }
+    if (action === this.actions.next)  {
+      this.nextSlide();
+    }
   }
 
 }

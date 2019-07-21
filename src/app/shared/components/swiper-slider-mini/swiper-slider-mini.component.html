@@ -10,13 +10,13 @@ class="swiper-container"
       [src]="img"
       *ngFor="let img of images; let i = index"
       class="mini-img"
-      (click)="changeSlide(i)"
+      (click)="onChangeSlide(i)"
     >
   </div>
   <span
     class="control"
     [ngClass]="isHorizontal ? 'start-horizontal' : 'start'"
-    (click)="prevSlide()"
+    (click)="onPrevSlide()"
   >
     <i
     class="fas"
@@ -25,7 +25,7 @@ class="swiper-container"
   <span
     class="control"
     [ngClass]="isHorizontal ? 'end-horizontal' : 'end'"
-    (click)="nextSlide()"
+    (click)="onNextSlide()"
   >
     <i
       class="fas"

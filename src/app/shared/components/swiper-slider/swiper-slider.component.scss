@@ -1,0 +1,51 @@
+@import '../../../../assets/themes/containers';
+@import '../../../../assets/themes/variables';
+
+$control-size: 40px;
+$container-padding: 10px;
+
+.slider-container {
+  max-width: 460px;
+  max-height: 460px;
+  padding: 10px;
+  position: relative;
+  transition: 0.3s all;
+  &:hover {
+    .control {
+      visibility: visible;
+    }
+  }
+}
+
+.slider-img {
+  width: 100%;
+  height: 100%;
+}
+
+.control {
+  visibility: hidden;
+  @extend .flex-center-center;
+  width: $control-size;
+  height: $control-size;
+  position: absolute;
+  z-index: 1;
+  top: calc(50% - #{$container-padding});
+  border: 1px solid $color-main-5;
+  border-radius: 50%;
+  background-color: $color-main-2;
+  cursor: pointer;
+  transition: 0.3s all;
+  &:hover {
+    background-color: $color-main-3;
+    border-color: $color-main-3;
+    color: $color-main-2;
+  }
+}
+
+.start {
+  left: calc(#{$container-padding} * 2);
+}
+
+.end {
+  right: calc(#{$container-padding} * 2);
+}

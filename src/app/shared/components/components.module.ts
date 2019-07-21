@@ -6,12 +6,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
   //  Components
-import { SwiperSliderMiniComponent } from './swiper-slider/swiper-slider-mini.component';
+import { SwiperSliderMiniComponent } from './swiper-slider-mini/swiper-slider-mini.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import { SwiperSliderComponent } from './swiper-slider/swiper-slider.component';
 
 const COMPONENTS = [
   BreadcrumbsComponent,
   SwiperSliderMiniComponent,
+  SwiperSliderComponent,
 ];
 
 @NgModule({

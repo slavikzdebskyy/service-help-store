@@ -1,0 +1,15 @@
+<div class="slider-container">
+  <img [src]="images[activeIndex]" class="slider-img">
+  <span
+    class="control start"
+    (click)="onPrevSlide()"
+  >
+    <i class="fas fa-chevron-left"></i>
+  </span>
+  <span
+    class="control end"
+    (click)="onNextSlide()"
+  >
+    <i class="fas fa-chevron-right"></i>
+  </span>
+</div>
