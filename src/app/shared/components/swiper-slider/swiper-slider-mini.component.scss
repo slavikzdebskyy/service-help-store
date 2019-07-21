@@ -1,0 +1,87 @@
+@import '../../../../assets/themes/containers';
+@import '../../../../assets/themes/variables';
+
+$container-padding: 10px;
+$container-margin: 10px;
+$control-size: 40px;
+
+.swiper-container {
+  @extend .col-spc-btwn-cntr;
+  width: calc(#{$swiper-mini-size} + #{$container-padding} * 2);
+  padding: $container-padding;
+  margin: $container-margin;
+  position: relative;
+  z-index: 0;
+  transition: 0.3s all;
+  &:hover {
+    .control {
+      visibility: visible;
+    }
+  }
+}
+
+.swiper-cont-horizontal {
+  @extend .row-spc-btwn-cntr;
+  width: calc(#{$swiper-mini-size} * 3 + #{$container-padding} * 2)
+}
+
+.img-container {
+  @extend .col-spc-btwn-cntr;
+  width: $swiper-mini-size;
+  height: calc(#{$swiper-mini-size} * 3);
+  position: relative;
+  overflow: hidden;
+}
+
+.img-cont-horizontal {
+  @extend .row-spc-btwn-cntr;
+  width: calc(#{$swiper-mini-size} * 3);
+  height: $swiper-mini-size;
+}
+
+.mini-img {
+  width: $swiper-mini-size;
+  height: $swiper-mini-size;
+  padding: 10px;
+  border: 1px solid $color-main-5;
+  cursor: pointer;
+}
+
+.control {
+  visibility: hidden;
+  @extend .flex-center-center;
+  width: $control-size;
+  height: $control-size;
+  position: absolute;
+  z-index: 1;
+  border: 1px solid $color-main-5;
+  border-radius: 50%;
+  background-color: $color-main-2;
+  cursor: pointer;
+  transition: 0.3s all;
+  &:hover {
+    background-color: $color-main-3;
+    border-color: $color-main-3;
+    color: $color-main-2;
+  }
+}
+
+.start {
+  top: calc(-#{$control-size} / 2 + #{$container-padding});
+  left: calc(50% - #{$control-size} / 2);
+}
+
+.start-horizontal {
+  top: calc(50% - #{$control-size} / 2);
+  left: calc(-#{$control-size} / 2 + #{$container-padding});
+}
+
+.end {
+  bottom: calc(-#{$control-size} / 2 + #{$container-padding});
+  left: calc(50% - #{$control-size} / 2);
+}
+
+.end-horizontal {
+  top: calc(50% - #{$control-size} / 2);
+  right: calc(-#{$control-size} / 2 + #{$container-padding});
+}

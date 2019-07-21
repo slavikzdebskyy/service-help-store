@@ -1,0 +1,34 @@
+<div
+class="swiper-container"
+[class.swiper-cont-horizontal]="isHorizontal"
+>
+  <div
+  class="img-container"
+  [class.img-cont-horizontal]="isHorizontal"
+  >
+    <img
+      [src]="img"
+      *ngFor="let img of images; let i = index"
+      class="mini-img"
+      (click)="changeSlide(i)"
+    >
+  </div>
+  <span
+    class="control"
+    [ngClass]="isHorizontal ? 'start-horizontal' : 'start'"
+    (click)="prevSlide()"
+  >
+    <i
+    class="fas"
+    [ngClass]="isHorizontal ? 'fa-chevron-left' : 'fa-chevron-up'"></i>
+  </span>
+  <span
+    class="control"
+    [ngClass]="isHorizontal ? 'end-horizontal' : 'end'"
+    (click)="nextSlide()"
+  >
+    <i
+      class="fas"
+      [ngClass]="isHorizontal ? 'fa-chevron-right' : 'fa-chevron-down'"></i>
+  </span>
+</div>
