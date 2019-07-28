@@ -42,6 +42,7 @@ $control-size: 40px;
 .mini-img {
   width: $swiper-mini-size;
   height: $swiper-mini-size;
+  position: relative;
   padding: 10px;
   border: 1px solid $color-main-5;
   cursor: pointer;

@@ -13,13 +13,13 @@ describe('SwiperSliderComponent', () => {
     .compileComponents();
   }));
 
-  beforeEach(() => {
+  beforeEach(async(() => {
     fixture = TestBed.createComponent(SwiperSliderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
+  }));
 
-  it('should create', () => {
+  it('should create test', () => {
     expect(component).toBeTruthy();
   });
 });
