@@ -1,4 +1,6 @@
-<div class="slider-container">
+<div
+  class="slider-container"
+  *ngIf="images?.length">
   <img [src]="images[activeIndex]" class="slider-img">
   <span
     class="control start"
