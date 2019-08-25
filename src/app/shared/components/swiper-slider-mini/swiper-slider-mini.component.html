@@ -8,7 +8,7 @@ class="swiper-container"
   [class.img-cont-horizontal]="isHorizontal"
   >
     <img
-      [src]="img"
+      [src]="img.path"
       *ngFor="let img of images; let i = index"
       class="mini-img"
       (click)="onChangeSlide(i)"
