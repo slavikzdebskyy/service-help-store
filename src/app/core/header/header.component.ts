@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
   //  Modules
 import { Constants } from './../../modules/constants/constants.module';
@@ -9,17 +9,19 @@ import { FormGroup, FormControl } from '@angular/forms';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   @Output() openSideNav = new EventEmitter<boolean>();
   constants = Constants;
-  searchForm: FormGroup;
+  searchForm!: FormGroup;
   wishListCount = 3;
   cartCout = 12;
 
-  constructor() { }
+  constructor() {
+    this.initForm();
+  }
 
-  ngOnInit() {
+  private initForm(): void {
     this.searchForm = new FormGroup({
       category: new FormControl(this.constants.CATEGORIES[0].name),
       searchKey: new FormControl(''),

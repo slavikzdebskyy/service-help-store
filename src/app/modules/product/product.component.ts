@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '@service-help/models';
+import { PRODUCT_HARD } from './hardcoded-product';
 
 @Component({
   selector: 'sh-product',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  public product: Product;
+
+  constructor() {
+    this.product = new Product(PRODUCT_HARD);
+  }
 
   ngOnInit() {
   }

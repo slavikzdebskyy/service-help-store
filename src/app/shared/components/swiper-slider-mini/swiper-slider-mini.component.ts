@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-
-import { SliderActions } from '../../enums/slider-actions.enum';
+import { IImage } from '@service-help/interfaces';
+import { SliderActions } from '@service-help/enums';
 
 @Component({
   selector: 'sh-swiper-slider-mini',
@@ -10,12 +10,15 @@ import { SliderActions } from '../../enums/slider-actions.enum';
 export class SwiperSliderMiniComponent {
 
   @Input() activeIndex: number;
-  @Input() images: string[];
+  @Input() images: IImage[];
   @Input() isHorizontal = false;
   @Output() changeSlide = new EventEmitter<SliderActions>();
   private actions = SliderActions;
 
-  constructor() {}
+  constructor() {
+    this.activeIndex = 0;
+    this.images = [];
+  }
 
   public onNextSlide() {
     this.changeSlide.emit(this.actions.next);

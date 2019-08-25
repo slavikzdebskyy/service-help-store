@@ -9,11 +9,13 @@ import { RouterModule } from '@angular/router';
 import { SwiperSliderMiniComponent } from './swiper-slider-mini/swiper-slider-mini.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { SwiperSliderComponent } from './swiper-slider/swiper-slider.component';
+import { ProductPriceComponent } from './product-price/product-price.component';
 
 const COMPONENTS = [
   BreadcrumbsComponent,
   SwiperSliderMiniComponent,
   SwiperSliderComponent,
+  ProductPriceComponent,
 ];
 
 @NgModule({

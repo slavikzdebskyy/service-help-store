@@ -1,7 +1,7 @@
 <div
   class="slider-container"
   *ngIf="images?.length">
-  <img [src]="images[activeIndex]" class="slider-img">
+  <img [src]="images[activeIndex].path" class="slider-img">
   <span
     class="control start"
     (click)="onPrevSlide()"
