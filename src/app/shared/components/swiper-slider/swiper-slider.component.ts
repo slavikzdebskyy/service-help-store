@@ -14,7 +14,10 @@ export class SwiperSliderComponent {
   @Output() changeSlide = new EventEmitter<SliderActions>();
   private actions = SliderActions;
 
-  constructor() { }
+  constructor() {
+    this.activeIndex = 0;
+    this.images = [];
+  }
 
   public onNextSlide() {
     this.changeSlide.emit(this.actions.next);

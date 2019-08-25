@@ -12,9 +12,7 @@ export class ProductImagesComponent implements OnInit {
   private actions = SliderActions;
   public readonly ACTIVE_INDEX = 1;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
     this. images = [
       'https://i2.rozetka.ua/goods/10442255/lenovo_81d600jyra_images_10442255072.jpg',
       'https://i2.rozetka.ua/goods/10442255/lenovo_81d600jyra_images_10442255948.jpg',
@@ -25,6 +23,10 @@ export class ProductImagesComponent implements OnInit {
       'https://i1.rozetka.ua/goods/12531253/95236360_images_12531253312.jpg',
       'https://i1.rozetka.ua/goods/12531253/95236360_images_12531253852.jpg',
     ];
+  }
+
+  ngOnInit() {
+
   }
 
   private prevSlide(): void {

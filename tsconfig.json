@@ -5,6 +5,7 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
+    "strict": true,
     "module": "es2015",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
@@ -19,7 +20,9 @@
     ],
     "paths": {
       "@service-help/interfaces": ["src/app/shared/interfaces/index.ts"],
-      "@service-help/components": ["src/app/shared/components/index.ts"]
+      "@service-help/components": ["src/app/shared/components/index.ts"],
+      "@service-help/models": ["src/app/shared/models/index.ts"],
+      "@service-help/enums": ["src/app/shared/enums/index.ts"]
     }
   }
 }
