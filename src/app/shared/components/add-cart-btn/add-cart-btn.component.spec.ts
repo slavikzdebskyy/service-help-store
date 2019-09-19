@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddCartBtnComponent } from './add-cart-btn.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('AddCartBtnComponent', () => {
   let component: AddCartBtnComponent;
@@ -9,6 +10,7 @@ describe('AddCartBtnComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [AddCartBtnComponent],
+      imports: [TranslateModule.forRoot()],
     })
     .compileComponents();
   }));
