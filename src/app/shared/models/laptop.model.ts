@@ -3,24 +3,24 @@ import { IProductResponse, ILaptop } from '@service-help/interfaces';
 import { ProductType } from '../enums/product-type.enum';
 
 export class Laptop extends Product implements ILaptop {
-  type: string;
-  color: string;
-  monitorSize: number;
-  monitorResolution: string;
-  monitorCoverType: string;
-  monitorType: string;
-  processor: string;
-  coreAmount: number;
-  memoryRamType: string;
-  memoryRamAmount: number;
-  videoType: string;
-  videoMemoryAmount: number;
-  video: string;
-  driveType: string;
-  driveMemoryAmount: number;
-  driveSecondMemoryAmount: number;
-  options: string;
-  productType: ProductType;
+  public type: string;
+  public color: string;
+  public monitorSize: number;
+  public monitorResolution: string;
+  public monitorCoverType: string;
+  public monitorType: string;
+  public processor: string;
+  public coreAmount: number;
+  public memoryRamType: string;
+  public memoryRamAmount: number;
+  public videoType: string;
+  public videoMemoryAmount: number;
+  public video: string;
+  public driveType: string;
+  public driveMemoryAmount: number;
+  public driveSecondMemoryAmount: number;
+  public options: string;
+  public productType: ProductType;
 
   constructor(params: IProductResponse) {
     super(params);

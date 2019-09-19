@@ -3,6 +3,7 @@ import { BuyStatus, PayStatus, ProductType } from '@service-help/enums';
 
 export const PRODUCT_HARD: IProductResponse = {
   barCode: 'qaswedfrt5454ff',
+  name: 'Laptop Samsung TS15LD',
   brand: 'Samsung',
   color: 'red',
   condition: 'used',
@@ -19,7 +20,14 @@ export const PRODUCT_HARD: IProductResponse = {
   videoMemoryAmount: 2,
   driveType: 'SSD',
   driveMemoryAmount: 512,
-  description: 'loremwdofjkhsjkfwjfjksfkskfd',
+  description: `Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Vitae delectus minus repellat quia veniam rem doloremque ab repudiandae labore doloribus
+    ducimus animi obcaecati laudantium molestiae debitis dolorum, aperiam dolor consectetur est, neque sapiente
+    incidunt, voluptatem ipsa. Quis nobis veniam impedit laboriosam minus tempora incidunt delectus temporibus
+    possimus voluptatibus aut nihil illo culpa, in iure assumenda obcaecati esse eligendi? Nam, asperiores vitae
+    laudantium quidem porro doloremque fuga, ducimus quae dolorem eligendi tempora consectetur fugit totam? Vitae
+    nisi enim ea, tempore provident mollitia, blanditiis id facere autem aperiam itaque quibusdam quaerat, corrupti
+    exercitationem! Obcaecati assumenda ipsa maxime deserunt quos veritatis eos illum?`,
   images: [
     {
       name: 'qq',

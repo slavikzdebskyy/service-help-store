@@ -3,19 +3,19 @@ import { IPC, IProductResponse } from '@service-help/interfaces';
 
 export class PC extends Product implements IPC {
 
-  type: string;
-  color: string;
-  processor: string;
-  coreAmount: number;
-  memoryRamType: string;
-  memoryRamAmount: number;
-  videoType: string;
-  videoMemoryAmount: number;
-  video: string;
-  driveType: string;
-  driveMemoryAmount: number;
-  driveSecondMemoryAmount: number;
-  options: string;
+  public type: string;
+  public color: string;
+  public processor: string;
+  public coreAmount: number;
+  public memoryRamType: string;
+  public memoryRamAmount: number;
+  public videoType: string;
+  public videoMemoryAmount: number;
+  public video: string;
+  public driveType: string;
+  public driveMemoryAmount: number;
+  public driveSecondMemoryAmount: number;
+  public options: string;
 
   constructor(public params: IProductResponse) {
     super(params);

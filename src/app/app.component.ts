@@ -9,7 +9,7 @@ import { Constants } from './modules/constants/constants.module';
 })
 export class AppComponent {
 
-  title = 'service-help-store';
+  public title: string = 'service-help-store';
 
   constructor(translate: TranslateService) {
     translate.setDefaultLang(Constants.LANGUAGES.DEAFAULT);

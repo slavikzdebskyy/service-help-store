@@ -1,3 +1,27 @@
-<p>
-  product-price works!
-</p>
+<div
+  class="row-spc-btwn-cntr price-container"
+  *ngIf="!discountPrice">
+  <span class="price">
+    {{ price | currency }}
+  </span>
+  <span
+    class="in-stock"
+    *ngIf="!isSmall && isStock">
+    {{ 'PRICE.in_stock' | translate }}
+  </span>
+</div>
+<div
+  class="row-spc-btwn-cntr price-container"
+  *ngIf="discountPrice">
+  <span class="price">
+    {{ discountPrice | currency }}
+  </span>
+  <span class="old-price">
+    {{ price | currency }}
+  </span>
+  <span
+    class="in-stock"
+    *ngIf="!isSmall && isStock">
+    {{ 'PRICE.in_stock' | translate }}
+  </span>
+</div>

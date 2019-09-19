@@ -1,0 +1,38 @@
+@import '../../../../assets/themes/variables';
+
+.add-btn {
+  position: relative;
+  border: 2px solid transparent;
+  height: 40px;
+  padding: 0 30px;
+  background-color: $color-main-9;
+  color: $color-main-2;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 40px;
+  transition: 0.2s all;
+  cursor: pointer;
+  outline: none;
+  .fas {
+    margin-right: 5px;
+    font-size: 12px;
+    visibility: hidden;
+  }
+  &:hover {
+    background-color: $color-main-2;
+    color: $color-main-3;
+    border-color: $color-main-3;
+    padding: 0px 30px 0px 50px;
+    .fas {
+      visibility: visible;
+    }
+  }
+}
+
+.in-cart {
+  background-color: $color-main-10;
+  &:hover {
+    color: $color-main-10;
+    border-color: $color-main-10;
+  }
+}

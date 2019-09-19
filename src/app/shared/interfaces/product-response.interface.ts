@@ -3,6 +3,7 @@ import { ProductType, BuyStatus, PayStatus } from '@service-help/enums';
 
 export interface IProductResponse {
   barCode: string;
+  name: string;
   brand: string;
   type?: string;
   color?: string;

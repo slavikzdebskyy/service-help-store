@@ -3,26 +3,28 @@ import { BuyStatus, PayStatus, ProductType } from '@service-help/enums';
 
 export class Product {
 
-  barCode: string;
-  brand: string;
-  condition: string;
-  guarantee: number;
-  description: string;
-  images?: IImage[];
-  buyStatus: BuyStatus;
-  payStatus: PayStatus;
-  loacation: string;
-  seo: string;
-  createdAt: string;
-  updatedAt?: string;
-  price: number;
-  isInStock: boolean;
-  discount: number;
-  quantity: number;
-  productType: ProductType;
+  public barCode: string;
+  public name: string;
+  public brand: string;
+  public condition: string;
+  public guarantee: number;
+  public description: string;
+  public images?: IImage[];
+  public buyStatus: BuyStatus;
+  public payStatus: PayStatus;
+  public loacation: string;
+  public seo: string;
+  public createdAt: string;
+  public updatedAt?: string;
+  public price: number;
+  public isInStock: boolean;
+  public discount: number;
+  public quantity: number;
+  public productType: ProductType;
 
   constructor (public params: IProductResponse) {
     this.barCode = params.barCode;
+    this.name = params.name;
     this.brand = params.brand;
     this.condition = params.condition;
     this.guarantee = params.guarantee;

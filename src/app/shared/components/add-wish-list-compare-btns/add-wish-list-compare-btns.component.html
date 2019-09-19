@@ -1,0 +1,24 @@
+<div class="compare-container row-spc-btwn-cntr">
+  <button
+    class="compare-wishlist-btn flex-center-center"
+    [class.in-wish-list]="isInWishList"
+    (click)="onWishListClickEmit()"
+  >
+  <i class="far fa-heart icon-out"></i>
+  <i class="fas fa-heart icon-in"></i>
+  <span *ngIf="!isSmall">
+    {{ isInWishList ?
+      ('BUTTONS.remove_from_wish_list' | translate) :
+      ('BUTTONS.add_to_wish_list' | translate) }}
+  </span>
+  </button>
+  <button
+    class="compare-wishlist-btn flex-center-center"
+    (click)="onCompareClickEmit()"
+  >
+  <i class="fas fa-exchange-alt"></i>
+  <span *ngIf="!isSmall">
+    {{ 'BUTTONS.add_to_compare' | translate }}
+  </span>
+  </button>
+</div>
