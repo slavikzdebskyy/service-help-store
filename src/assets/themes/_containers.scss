@@ -17,3 +17,10 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.row-spc-around-cntr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}

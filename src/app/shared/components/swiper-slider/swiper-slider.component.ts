@@ -9,22 +9,28 @@ import { SliderActions } from '@service-help/enums';
   styleUrls: ['./swiper-slider.component.scss'],
 })
 export class SwiperSliderComponent {
+  @Input()
+  private activeIndex: number;
+  @Input()
+  public images: IImage[];
 
-  @Input() activeIndex: number;
-  @Input() images: IImage[];
-  @Output() changeSlide = new EventEmitter<SliderActions>();
-  private actions = SliderActions;
+  @Output()
+  private changeSlide: EventEmitter<SliderActions>;
+
+  private actions: any;
 
   constructor() {
     this.activeIndex = 0;
     this.images = [];
+    this.changeSlide = new EventEmitter<SliderActions>();
+    this.actions = SliderActions;
   }
 
-  public onNextSlide() {
+  public onNextSlide(): void {
     this.changeSlide.emit(this.actions.next);
   }
 
-  public onPrevSlide() {
+  public onPrevSlide(): void {
     this.changeSlide.emit(this.actions.prev);
   }
 

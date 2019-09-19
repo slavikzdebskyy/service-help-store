@@ -23,5 +23,15 @@
     "monitors": "Monitors",
     "home": "Home",
     "accessories": "Accessories"
+  },
+  "PRICE": {
+    "in_stock": "in stock"
+  },
+  "BUTTONS": {
+    "remove_from_cart": "Remove from cart",
+    "add_to_cart": "Add to cart",
+    "add_to_wish_list": "Add to wish list",
+    "remove_from_wish_list": "Remove from wish list",
+    "add_to_compare": "Add to compare"
   }
 }

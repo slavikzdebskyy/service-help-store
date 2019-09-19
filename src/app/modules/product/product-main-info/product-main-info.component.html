@@ -1,4 +1,26 @@
-<p>
-  product-main-info works!
-</p>
-<sh-product-price></sh-product-price>
+<div class="col-spc-btwn-cntr product-info-container">
+  <h2 class="title-2">
+    {{ product?.name }}
+  </h2>
+  <sh-product-price
+    [price]="product?.price"
+    [discount]="product?.discount"
+    [isStock]="product?.isInStock"
+  ></sh-product-price>
+  <p class="text-description">
+    {{ product?.description }}
+  </p>
+</div>
+
+
+<sh-add-cart-btn
+  [isInCart]="isProductInCart"
+  (clickEvent)="addToCart()">
+</sh-add-cart-btn>
+<sh-add-wish-list-compare-btns
+[isInWishList]="isProductInWishList"
+[isSmall]="false"
+(wishListClickEmit)="addToWishList()"
+(compareClickEmit)="toCompare()"
+>
+</sh-add-wish-list-compare-btns>
