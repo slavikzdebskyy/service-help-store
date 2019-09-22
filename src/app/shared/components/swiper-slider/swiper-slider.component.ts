@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectorRef } from '@angular/core';
 
 import { IImage } from '@service-help/interfaces';
 import { SliderActions } from '@service-help/enums';
@@ -19,7 +19,7 @@ export class SwiperSliderComponent {
 
   private actions: any;
 
-  constructor() {
+  constructor(private changeDetectorRef: ChangeDetectorRef) {
     this.activeIndex = 0;
     this.images = [];
     this.changeSlide = new EventEmitter<SliderActions>();
@@ -28,10 +28,12 @@ export class SwiperSliderComponent {
 
   public onNextSlide(): void {
     this.changeSlide.emit(this.actions.next);
+    this.changeDetectorRef.markForCheck();
   }
 
   public onPrevSlide(): void {
     this.changeSlide.emit(this.actions.prev);
+    this.changeDetectorRef.markForCheck();
   }
 
 }

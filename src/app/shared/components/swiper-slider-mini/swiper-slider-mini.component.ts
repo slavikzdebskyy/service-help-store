@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { IImage } from '@service-help/interfaces';
 import { SliderActions } from '@service-help/enums';
 
@@ -6,7 +6,6 @@ import { SliderActions } from '@service-help/enums';
   selector: 'sh-swiper-slider-mini',
   templateUrl: './swiper-slider-mini.component.html',
   styleUrls: ['./swiper-slider-mini.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SwiperSliderMiniComponent {
   @Input()
