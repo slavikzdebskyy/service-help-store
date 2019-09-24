@@ -4,9 +4,8 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
   //  Modules
-import { ComponentsModule } from './../shared/components/components.module';
-import { MaterialModule } from '../modules/material/material.module';
-import { ProductModule } from '../modules/product/product.module';
+import { ProductListModule, ProductModule, MaterialModule } from '@service-help/modules';
+import { ComponentsModule } from '@service-help/components';
 import { CoreRoutingModule } from './core-routing.module';
 
   //  Components
@@ -27,6 +26,7 @@ import { RouterModule } from '@angular/router';
     ProductModule,
     ComponentsModule,
     RouterModule,
+    ProductListModule,
   ],
   declarations: [
     LayoutComponent,

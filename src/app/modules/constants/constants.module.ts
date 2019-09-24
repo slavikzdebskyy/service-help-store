@@ -21,6 +21,11 @@ export class Constants {
     LOGIN: 'login',
     REGISTRATION: 'registration',
     PRODUCT: 'product/:id',
+    LAPTOPS: 'laptops',
+    PC: 'pc',
+    MONITORS: 'monitors',
+    ACCESSORIES: 'accessories',
+    DISCOUNTS: 'discounts',
   };
 
   public static readonly ROUTERS_API: any = {
