@@ -2,11 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
   //  Modules
-import { Constants } from './../constants/constants.module';
+import { Constants } from '../constants/constants.module';
 
-//  Components
+  //  Components
 import { ProductComponent } from './product.component';
-import { LayoutComponent } from './../../core/layout/layout.component';
 
   //  Services
 import { Route } from './../../services/router.service';

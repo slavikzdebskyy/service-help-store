@@ -6,7 +6,6 @@ import { Constants } from './modules/constants/constants.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { AuthModule } from './auth/auth.module';
-import { LayoutComponent } from './core/layout/layout.component';
 
 const routes: Routes = [
   {
@@ -16,6 +15,26 @@ const routes: Routes = [
   {
     path: Constants.ROUTERS.PRODUCT,
     loadChildren: './modules/product/product.module#ProductModule',
+  },
+  {
+    path: Constants.ROUTERS.LAPTOPS,
+    loadChildren: './modules/product-list/product-list.module#ProductListModule',
+  },
+  {
+    path: Constants.ROUTERS.PC,
+    loadChildren: './modules/product-list/product-list.module#ProductListModule',
+  },
+  {
+    path: Constants.ROUTERS.MONITORS,
+    loadChildren: './modules/product-list/product-list.module#ProductListModule',
+  },
+  {
+    path: Constants.ROUTERS.ACCESSORIES,
+    loadChildren: './modules/product-list/product-list.module#ProductListModule',
+  },
+  {
+    path: Constants.ROUTERS.DISCOUNTS,
+    loadChildren: './modules/product-list/product-list.module#ProductListModule',
   },
   {
     path: '**',
