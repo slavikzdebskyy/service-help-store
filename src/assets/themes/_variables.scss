@@ -1,22 +1,43 @@
 // Colors
 
-$color-main-1: #1E1F29;
+$color-main-1: #1e1f29;
 $color-main-2: #fff;
-$color-main-3: #D10024;
-$color-main-4: #15161D;
-$color-main-5: #E4E7ED;
-$color-main-6: #2B2D42;
-$color-main-7: #FBFBFC;
-$color-main-8: #8D99AE;
+$color-main-3: #d10024;
+$color-main-4: #15161d;
+$color-main-5: #e4e7ed;
+$color-main-6: #2b2d42;
+$color-main-7: #fbfbfc;
+$color-main-8: #8d99ae;
+/* footer colors */
+$color-1: #b9babc;
+
+/* Font-size */
+$font-size-10px: .625rem; /* 10px */
+$font-size-12px: .75rem; /* 12px */
+$font-size-14px: 0.875rem; /* 14px */
+$font-size-16px: 1rem; /* 16px */
+$font-size-18px: 1.125rem; /* 18px */
+$font-size-24px: 1.5rem; /* 24px */
+$font-size-30px: 1.875rem; /* 30px */
+$font-size-36px: 2.25rem; /* 36px */
+
+/* line-height */
+$line-height-14px: 0.875rem;
+$line-height-18px: 1.125rem;
 
 
+/*=========
+font-weight
+======== */
+$font-weight400: 400;
+$font-weight500: 500;
 
-  //  Media break points
 
+//  Media break points
 $break-tiny: 480px;
 $break-small: 600px;
 $break-medium: 800px;
 $break-large: 960px;
 
-  // image sizes
+// image sizes
 $swiper-mini-size: 120px;

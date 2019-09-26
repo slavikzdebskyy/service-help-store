@@ -1,0 +1,117 @@
+@import '../../../assets/themes/containers';
+@import '../../../assets/themes/variables';
+@import '../../../assets/themes/topography';
+
+.footer {
+  color: $color-1;
+
+  ul {
+    list-style: none;
+  }
+
+  .container {
+    max-width: 100%;
+
+    .top-section {
+      display: flex;
+      justify-content: space-around;
+      flex-flow: row wrap;
+      padding: 30px 0;
+      background-color: $color-main-4;
+
+      .box {
+        margin: 30px 15px;
+        padding: 0 15px;
+
+        .title {
+          color: $color-main-2;
+          text-transform: uppercase;
+          font-size: $font-size-18px;
+          margin: 0px 0px 30px;
+        }
+
+        .text {
+          font-weight: $font-weight400;
+          font-size: $font-size-14px;
+          line-height: $line-height-14px;
+          margin: 0 0 10px;
+          width: 20vw;
+        }
+
+        .main-links {
+          display: flex;
+          flex-direction: column;
+
+          .link {
+            margin-top: 15px;
+
+            .link-item {
+              text-decoration: none;
+              color: inherit;
+              transition: 0.2s color;
+              font-weight: $font-weight500;
+              display: flex;
+
+              i {
+                margin-right: 15px;
+                color: $color-main-3;
+                font-size: $font-size-12px;
+                text-align: center;
+              }
+
+              &:hover {
+                color: $color-main-3;
+                text-decoration: none;
+                outline: none;
+              }
+            }
+
+            &:nth-child(1) {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .bottom-section {
+      background-color: $color-main-1;
+      padding: 30px 0;
+
+      .credit-cards {
+        padding: 0 15px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        .list-credit {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+
+          .list-credit-items {
+            margin-right: 8px;
+
+            .list-credit-link {
+              color: $color-main-4;
+              display: block;
+
+              i {
+                font-size: $font-size-36px;
+              }
+            }
+          }
+        }
+
+        .copyright {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 30px 0 0;
+          font-size: $font-size-12px;
+        }
+      }
+    }
+  }
+}
