@@ -15,7 +15,7 @@ export class ProductComponent implements OnInit {
     this.product = new Product(PRODUCT_HARD);
   }
 
-  ngOnInit() {
+  public ngOnInit(): void {
   }
 
 }

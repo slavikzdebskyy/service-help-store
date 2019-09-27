@@ -8,23 +8,30 @@ import { SliderActions } from '@service-help/enums';
   styleUrls: ['./swiper-slider-mini.component.scss'],
 })
 export class SwiperSliderMiniComponent {
+  @Input()
+  private activeIndex: number;
+  @Input()
+  public images: IImage[];
+  @Input()
+  public isHorizontal: boolean;
+  @Output()
+  public changeSlide: EventEmitter<SliderActions>;
 
-  @Input() activeIndex: number;
-  @Input() images: IImage[];
-  @Input() isHorizontal = false;
-  @Output() changeSlide = new EventEmitter<SliderActions>();
-  private actions = SliderActions;
+  private actions: any;
 
   constructor() {
     this.activeIndex = 0;
     this.images = [];
+    this.isHorizontal = false;
+    this.changeSlide = new EventEmitter<SliderActions>();
+    this.actions = SliderActions;
   }
 
-  public onNextSlide() {
+  public onNextSlide(): void {
     this.changeSlide.emit(this.actions.next);
   }
 
-  public onPrevSlide() {
+  public onPrevSlide(): void {
     this.changeSlide.emit(this.actions.prev);
   }
 

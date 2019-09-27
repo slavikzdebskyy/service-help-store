@@ -1,8 +1,12 @@
 <sh-breadcrumbs></sh-breadcrumbs>
-<div class="row-spc-btwn-cntr wrap">
+<div class="row-spc-around-cntr product-wrapper">
   <sh-product-images
     *ngIf="product?.images?.length"
-    [images]="product.images"></sh-product-images>
-  <sh-product-main-info></sh-product-main-info>
+    [images]="product.images">
+  </sh-product-images>
+  <sh-product-main-info
+  [product]="product"
+  >
+  </sh-product-main-info>
 </div>
 

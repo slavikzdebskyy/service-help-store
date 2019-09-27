@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
   //  Modules
 import { Constants } from './../../modules/constants/constants.module';
@@ -8,16 +8,22 @@ import { FormGroup, FormControl } from '@angular/forms';
   selector: 'sh-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
+  @Output()
+  private openSideNav: EventEmitter<boolean>;
 
-  @Output() openSideNav = new EventEmitter<boolean>();
-  constants = Constants;
-  searchForm!: FormGroup;
-  wishListCount = 3;
-  cartCout = 12;
+  public constants: any;
+  public searchForm!: FormGroup;
+  public wishListCount: number;
+  public cartCout: number;
 
   constructor() {
+    this.openSideNav = new EventEmitter<boolean>();
+    this.constants = Constants;
+    this.wishListCount = 3;
+    this.cartCout = 12;
     this.initForm();
   }
 

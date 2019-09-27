@@ -1,0 +1,12 @@
+<div class="flex-center-center add-container">
+  <button
+    class="add-btn"
+    (click)="onClickEvent()"
+    [class.in-cart]="isInCart"
+  >
+    <i class="fas fa-shopping-cart"></i>
+    {{ isInCart ?
+      ('BUTTONS.remove_from_cart' | translate) :
+      ('BUTTONS.add_to_cart' | translate) }}
+  </button>
+</div>

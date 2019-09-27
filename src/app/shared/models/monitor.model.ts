@@ -4,14 +4,14 @@ import { IProductResponse } from '@service-help/interfaces';
 
 export class Monitor extends Product {
 
-  monitorType: string;
-  monitorResolution: string;
-  monitorSize: number;
-  contrast?: number;
-  brightness?: number;
-  light: string;
-  connectors: string;
-  options: string;
+  public monitorType: string;
+  public monitorResolution: string;
+  public monitorSize: number;
+  public contrast?: number;
+  public brightness?: number;
+  public light: string;
+  public connectors: string;
+  public options: string;
 
   constructor(public params: IProductResponse) {
     super(params);

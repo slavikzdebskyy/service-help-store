@@ -3,6 +3,7 @@
   "rulesDirectory": [
     "node_modules/codelyzer"
   ],
+  "tslint.exclude": "**/src/**/*.spec.ts",
   "rules": {
     "arrow-return-shorthand": true,
     "callable-types": true,
@@ -15,8 +16,20 @@
       true,
       "rxjs/Rx"
     ],
+    "typedef": [
+      true,
+      "call-signature",
+      "property-declaration",
+      "parameter",
+      "member-variable-declaration",
+      "arrow-call-signature",
+      "arrow-parameter",
+      "variable-declaration",
+      "object-destructuring",
+      "array-destructuring"
+    ],
     "interface-over-type-literal": true,
-    "member-access": false,
+    "member-access": [true, "check-accessor"],
     "member-ordering": [
       true,
       {
@@ -45,10 +58,6 @@
     "no-empty": false,
     "no-empty-interface": true,
     "no-eval": true,
-    "no-inferrable-types": [
-      true,
-      "ignore-params"
-    ],
     "no-misused-new": true,
     "no-non-null-assertion": true,
     "no-shadowed-variable": true,

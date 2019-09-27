@@ -1,0 +1,44 @@
+@import '../../../../assets/themes/variables';
+
+.compare-container {
+  padding: 10px 0;
+  justify-content: flex-start;
+}
+
+.compare-wishlist-btn {
+  border: none;
+  outline: none;
+  background: none;
+  color: $color-main-6;
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: 0.2s all;
+  cursor: pointer;
+  flex-wrap: nowrap;
+
+  &:hover {
+    background-color: $color-main-2;
+    color: $color-main-3;
+    border-color: $color-main-3;
+  }
+
+  .fas,
+  .far {
+    padding-right: 6px;
+  }
+
+  .icon-in {
+    display: none;
+  }
+}
+
+.in-wish-list {
+  color: $color-main-3;
+
+  .icon-in {
+    display: block;
+  }
+  .icon-out {
+    display: none;
+  }
+}

@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
   //  Modules
-import { ComponentsModule } from './components/components.module';
+import { ComponentsModule } from '@service-help/components';
+import { CurrencyPipe } from './pipes/currency.pipe';
 
 @NgModule({
   imports: [
@@ -11,6 +12,6 @@ import { ComponentsModule } from './components/components.module';
     TranslateModule,
     ComponentsModule,
   ],
-  declarations: [],
+  declarations: [CurrencyPipe],
 })
 export class SharedModule { }

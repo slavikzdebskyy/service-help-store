@@ -12,7 +12,7 @@ import { AuthModule } from './auth/auth.module';
 import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
 
-export const httpLoaderFactory = (http: HttpClient) => {
+export const httpLoaderFactory: any = (http: HttpClient): any => {
   return new TranslateHttpLoader(http, '../assets/i18n/', '.json');
 };
 
