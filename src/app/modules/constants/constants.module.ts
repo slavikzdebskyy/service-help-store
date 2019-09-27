@@ -17,7 +17,7 @@ export class Constants {
   };
 
   public static readonly ROUTERS: any = {
-    HOME: '',
+    EMPTY: '',
     LOGIN: 'login',
     REGISTRATION: 'registration',
     PRODUCT: 'product/:id',
