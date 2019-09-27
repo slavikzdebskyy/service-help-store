@@ -8,7 +8,7 @@ export class Route {
   static withLayout(routes: Routes): Routes {
     return [
       {
-        path: Constants.ROUTERS.HOME,
+        path: Constants.ROUTERS.EMPTY,
         component: LayoutComponent,
         children: routes,
       },

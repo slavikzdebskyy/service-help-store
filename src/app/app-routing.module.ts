@@ -9,7 +9,7 @@ import { AuthModule } from './auth/auth.module';
 
 const routes: Routes = [
   {
-    path: Constants.ROUTERS.HOME,
+    path: Constants.ROUTERS.EMPTY,
     loadChildren: './core/core.module#CoreModule',
   },
   {
@@ -17,28 +17,12 @@ const routes: Routes = [
     loadChildren: './modules/product/product.module#ProductModule',
   },
   {
-    path: Constants.ROUTERS.LAPTOPS,
-    loadChildren: './modules/product-list/product-list.module#ProductListModule',
-  },
-  {
-    path: Constants.ROUTERS.PC,
-    loadChildren: './modules/product-list/product-list.module#ProductListModule',
-  },
-  {
-    path: Constants.ROUTERS.MONITORS,
-    loadChildren: './modules/product-list/product-list.module#ProductListModule',
-  },
-  {
-    path: Constants.ROUTERS.ACCESSORIES,
-    loadChildren: './modules/product-list/product-list.module#ProductListModule',
-  },
-  {
-    path: Constants.ROUTERS.DISCOUNTS,
+    path: Constants.ROUTERS.EMPTY,
     loadChildren: './modules/product-list/product-list.module#ProductListModule',
   },
   {
     path: '**',
-    redirectTo: Constants.ROUTERS.HOME,
+    redirectTo: Constants.ROUTERS.EMPTY,
     pathMatch: 'full',
   },
 ];
