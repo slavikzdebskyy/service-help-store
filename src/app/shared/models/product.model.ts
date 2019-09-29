@@ -10,6 +10,7 @@ export class Product {
   public guarantee: number;
   public description: string;
   public images?: IImage[];
+  public imageHead: IImage;
   public buyStatus: BuyStatus;
   public payStatus: PayStatus;
   public loacation: string;
@@ -30,6 +31,7 @@ export class Product {
     this.guarantee = params.guarantee;
     this.description = params.description;
     this.images = params.images ? params.images.slice(0) : [];
+    this.imageHead = params.imageHead;
     this.buyStatus = params.buyStatus;
     this.payStatus = params.payStatus;
     this.loacation = params.loacation || '';

@@ -70,6 +70,11 @@ export const PRODUCT_HARD: IProductResponse = {
       path: 'https://i2.rozetka.ua/goods/10442255/lenovo_81d600jyra_images_10442255072.jpg',
     },
   ],
+  imageHead: {
+    name: 'qq',
+    id: 'qw12',
+    path: 'https://i1.rozetka.ua/goods/12531253/95236360_images_12531253312.jpg',
+  },
   buyStatus: BuyStatus.ACTIVE,
   payStatus: PayStatus.NOT_PAID,
   productType: ProductType.LAPTOP,
