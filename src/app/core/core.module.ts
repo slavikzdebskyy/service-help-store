@@ -14,6 +14,8 @@ import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -27,12 +29,15 @@ import { RouterModule } from '@angular/router';
     ComponentsModule,
     RouterModule,
     ProductListModule,
+    ComponentsModule,
+    SharedModule,
   ],
   declarations: [
     LayoutComponent,
     HeaderComponent,
     FooterComponent,
     NavigationBarComponent,
+    HomeComponent,
   ],
 })
 export class CoreModule { }
