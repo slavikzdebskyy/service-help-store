@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
   //  Modules
-import { RouterModule } from '@angular/router';
+import { MaterialModule } from './../../modules/material/material.module';
 import { PipesModule } from './../pipes/pipes.module';
+import { RouterModule } from '@angular/router';
 
   //  Components
 import { SwiperSliderMiniComponent } from './swiper-slider-mini/swiper-slider-mini.component';
@@ -31,6 +32,7 @@ const COMPONENTS: any = [
     TranslateModule,
     RouterModule,
     PipesModule,
+    MaterialModule,
   ],
   declarations: [...COMPONENTS],
   exports: [...COMPONENTS],

@@ -12,7 +12,7 @@ import { Route } from '../services/router.service';
 
 const routes: Routes = Route.withLayout([
   {
-    path: Constants.ROUTERS.HOME,
+    path: Constants.ROUTERS.EMPTY,
     component: HomeComponent,
   },
 ]);
