@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'sh-add-wish-list-compare-btns',
@@ -11,6 +11,8 @@ export class AddWishListCompareBtnsComponent {
   public isInWishList: boolean;
   @Input()
   public isSmall: boolean;
+  @Input()
+  public isTooltips: boolean;
   @Output()
   private wishListClickEmit: EventEmitter<void>;
   @Output()
@@ -19,6 +21,7 @@ export class AddWishListCompareBtnsComponent {
   public constructor() {
     this.isInWishList = false;
     this.isSmall = false;
+    this.isTooltips = false;
     this.wishListClickEmit = new EventEmitter();
     this.compareClickEmit = new EventEmitter();
   }
@@ -28,6 +31,9 @@ export class AddWishListCompareBtnsComponent {
   }
   public onCompareClickEmit(): void {
     this.compareClickEmit.emit();
+  }
+
+  public onQuickView(): void {
   }
 
 }

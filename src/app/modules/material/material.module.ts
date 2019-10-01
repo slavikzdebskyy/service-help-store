@@ -5,12 +5,14 @@ import { CommonModule } from '@angular/common';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 const MODULES: any = [
   CommonModule,
   MatButtonModule,
   MatMenuModule,
   MatSidenavModule,
+  MatTooltipModule,
 ];
 
 @NgModule({
