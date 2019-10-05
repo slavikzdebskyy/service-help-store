@@ -77,8 +77,10 @@
     .bottom-section {
       background-color: $color-main-1;
       padding: 30px 0;
-
-      .credit-cards {
+      /*-------------
+        for credit cards block
+        -----------  */
+      /*.credit-cards {
         padding: 0 15px;
         margin: 0 auto;
         display: flex;
@@ -103,14 +105,14 @@
             }
           }
         }
+      } */
 
-        .copyright {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: 30px 0 0;
-          font-size: $font-size-12px;
-        }
+      .copyright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0 0;
+        font-size: $font-size-12px;
       }
     }
   }
