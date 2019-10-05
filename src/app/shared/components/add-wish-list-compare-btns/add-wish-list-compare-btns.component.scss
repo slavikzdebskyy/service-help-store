@@ -1,7 +1,7 @@
 @import '../../../../assets/themes/variables';
 
 .compare-container {
-  padding: 10px 0;
+  padding: 20px 0;
   justify-content: flex-start;
 }
 
@@ -15,16 +15,32 @@
   transition: 0.2s all;
   cursor: pointer;
   flex-wrap: nowrap;
+  padding: 0;
+  margin: 0 8px 0;
 
   &:hover {
-    background-color: $color-main-2;
     color: $color-main-3;
-    border-color: $color-main-3;
   }
 
   .fas,
   .far {
     padding-right: 6px;
+  }
+
+  .small {
+    width: 40px;
+    height: 40px;
+
+    .fas,
+    .far {
+      padding-right: 0;
+    }
+
+    &:hover {
+      background-color: $color-main-5;
+      border-color: $color-main-3;
+      border-radius: 50%;
+    }
   }
 
   .icon-in {

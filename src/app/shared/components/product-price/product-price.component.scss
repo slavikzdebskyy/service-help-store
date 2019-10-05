@@ -25,3 +25,12 @@
   margin-left: 30px;
   color: $color-main-3;
 }
+
+.small {
+  .price {
+    font-size: 18px;
+  }
+  .old-price {
+    font-size: 12px;
+  }
+}

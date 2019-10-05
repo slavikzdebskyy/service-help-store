@@ -1,0 +1,19 @@
+@import './variables';
+
+.divider-horizontal {
+  width: 100%;
+  position: relative;
+  margin: 15px 0px 10px;
+  height: 20px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    height: 1px;
+    background-color: $color-main-5;
+  }
+}

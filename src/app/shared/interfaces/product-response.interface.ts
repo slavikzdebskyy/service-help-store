@@ -26,6 +26,7 @@ export interface IProductResponse {
   options?: string;
   description: string;
   images?: IImage[];
+  imageHead: IImage;
   buyStatus: BuyStatus;
   payStatus: PayStatus;
   loacation?: string;

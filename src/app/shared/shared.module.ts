@@ -4,14 +4,15 @@ import { NgModule } from '@angular/core';
 
   //  Modules
 import { ComponentsModule } from '@service-help/components';
-import { CurrencyPipe } from './pipes/currency.pipe';
+import { PipesModule } from './pipes/pipes.module';
 
 @NgModule({
   imports: [
     CommonModule,
     TranslateModule,
     ComponentsModule,
+    PipesModule,
   ],
-  declarations: [CurrencyPipe],
+  declarations: [],
 })
 export class SharedModule { }

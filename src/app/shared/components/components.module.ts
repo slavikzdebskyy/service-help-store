@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
   //  Modules
+import { MaterialModule } from './../../modules/material/material.module';
+import { PipesModule } from './../pipes/pipes.module';
 import { RouterModule } from '@angular/router';
 
   //  Components
@@ -12,6 +14,7 @@ import { SwiperSliderComponent } from './swiper-slider/swiper-slider.component';
 import { ProductPriceComponent } from './product-price/product-price.component';
 import { AddCartBtnComponent } from './add-cart-btn/add-cart-btn.component';
 import { AddWishListCompareBtnsComponent } from './add-wish-list-compare-btns/add-wish-list-compare-btns.component';
+import { ProductCardMiniComponent } from './product-card-mini/product-card-mini.component';
 
 const COMPONENTS: any = [
   BreadcrumbsComponent,
@@ -20,6 +23,7 @@ const COMPONENTS: any = [
   ProductPriceComponent,
   AddCartBtnComponent,
   AddWishListCompareBtnsComponent,
+  ProductCardMiniComponent,
 ];
 
 @NgModule({
@@ -27,6 +31,8 @@ const COMPONENTS: any = [
     CommonModule,
     TranslateModule,
     RouterModule,
+    PipesModule,
+    MaterialModule,
   ],
   declarations: [...COMPONENTS],
   exports: [...COMPONENTS],
