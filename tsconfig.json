@@ -2,29 +2,44 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "downlevelIteration": true,
+    "importHelpers": true,
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "strict": true,
-    "module": "es2015",
+    "module": "esnext",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
+    "target": "es2015",
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
       "es2017",
-      "dom"
+      "dom",
+      "esnext.asynciterable"
     ],
     "paths": {
-      "@service-help/interfaces": ["src/app/shared/interfaces/index.ts"],
-      "@service-help/components": ["src/app/shared/components/index.ts"],
-      "@service-help/models": ["src/app/shared/models/index.ts"],
-      "@service-help/enums": ["src/app/shared/enums/index.ts"],
-      "@service-help/modules": ["src/app/modules/index.ts"],
-      "@service-help/services": ["src/app/services/index.ts"]
+      "@service-help/interfaces": [
+        "src/app/shared/interfaces/index.ts"
+      ],
+      "@service-help/components": [
+        "src/app/shared/components/index.ts"
+      ],
+      "@service-help/models": [
+        "src/app/shared/models/index.ts"
+      ],
+      "@service-help/enums": [
+        "src/app/shared/enums/index.ts"
+      ],
+      "@service-help/modules": [
+        "src/app/modules/index.ts"
+      ],
+      "@service-help/services": [
+        "src/app/services/index.ts"
+      ]
     }
   }
 }
