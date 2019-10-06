@@ -4,6 +4,7 @@
 
 export const environment: any = {
   production: false,
+  graphqlURL: 'http://localhost:3000/graphql',
 };
 
 /*

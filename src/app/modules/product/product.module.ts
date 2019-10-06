@@ -10,6 +10,9 @@ import { ProductComponent } from './product.component';
 import { ProductImagesComponent } from './product-images/product-images.component';
 import { ProductMainInfoComponent } from './product-main-info/product-main-info.component';
 
+  //  Services
+import { ProductService } from 'src/app/services/product.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -21,5 +24,6 @@ import { ProductMainInfoComponent } from './product-main-info/product-main-info.
     ProductImagesComponent,
     ProductMainInfoComponent,
   ],
+  providers: [ProductService],
 })
 export class ProductModule { }
