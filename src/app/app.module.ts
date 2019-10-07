@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
   //  Modules
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
+import { GraphQLModule } from './graphql.module';
 import { AuthModule } from './auth/auth.module';
 import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
@@ -35,6 +36,7 @@ export const httpLoaderFactory: any = (http: HttpClient): any => {
         deps: [HttpClient],
       },
     }),
+    GraphQLModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
