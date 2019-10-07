@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddWishListCompareBtnsComponent } from './add-wish-list-compare-btns.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 describe('AddWishListCompareBtnsComponent', () => {
   let component: AddWishListCompareBtnsComponent;
@@ -10,7 +11,7 @@ describe('AddWishListCompareBtnsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [AddWishListCompareBtnsComponent],
-      imports: [TranslateModule.forRoot()],
+      imports: [TranslateModule.forRoot(), MatTooltipModule],
     })
     .compileComponents();
   }));
