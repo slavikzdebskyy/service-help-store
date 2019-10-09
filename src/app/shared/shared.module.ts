@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
   //  Modules
 import { ComponentsModule } from '@service-help/components';
+import { MaterialModule } from '@service-help/modules';
 import { PipesModule } from './pipes/pipes.module';
 
 @NgModule({
@@ -12,6 +13,7 @@ import { PipesModule } from './pipes/pipes.module';
     TranslateModule,
     ComponentsModule,
     PipesModule,
+    MaterialModule,
   ],
   declarations: [],
 })
