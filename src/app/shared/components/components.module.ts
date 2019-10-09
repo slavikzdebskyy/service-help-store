@@ -1,4 +1,5 @@
 import { TranslateModule } from '@ngx-translate/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
@@ -33,6 +34,7 @@ const COMPONENTS: any = [
     RouterModule,
     PipesModule,
     MaterialModule,
+    MDBBootstrapModule.forRoot(),
   ],
   declarations: [...COMPONENTS],
   exports: [...COMPONENTS],

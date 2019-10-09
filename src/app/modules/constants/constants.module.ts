@@ -52,4 +52,13 @@ export class Constants {
     { name: 'Accessories', translateKey: 'CATEGORIES.accessories' },
   ];
 
+  public static readonly CAROUSEL_CONFIG: any = {
+    mode: {
+      multiple: 'multiple',
+      single: 'single',
+    },
+    breakpointMode: 768,
+    chunkMode: 992,
+  };
+
 }

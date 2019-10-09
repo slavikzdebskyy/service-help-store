@@ -1,50 +1,52 @@
-<div
-  *ngIf="product"
-  class="product-cart-container col-spc-btwn-cntr"
->
-  <div class="content">
-    <div class="product-label">
-      <span
-        *ngIf="product.discount"
-        class="label-discount"
-      >
-        {{ product.discount | discount }}
-      </span>
-    </div>
-    <img class="product-img" [src]="product.imageHead.path">
-    <div class="product-body col-spc-btwn-cntr">
-      <span class="category">
-        {{ product.productType | category }}
-      </span>
-      <h4
-        class="title-4 product-name"
-        [routerLink]="'/product/' + product.barCode"
-      >
-        {{ product.name }}
-      </h4>
-      <sh-product-price
-        [price]="product.price"
-        [isStock]="product.isInStock"
-        [discount]="product.discount"
-        [isSmall]="true"
-      >
-      </sh-product-price>
-      <div class="divider-horizontal"></div>
-      <sh-add-wish-list-compare-btns
-      [isInWishList]="isInWishList"
-      [isSmall]="true"
-      [isTooltips]="true"
-      (wishListClickEmit)="wishListToggle()"
-      (compareClickEmit)="addToCompare()"
-      >
-      </sh-add-wish-list-compare-btns>
-    </div>
+<mdb-card *ngIf="product"
+          class="product-cart-container">
+  <div class="product-label">
+    <span *ngIf="product.discount"
+          class="label-discount">
+      {{ product.discount | discount }}
+    </span>
   </div>
+
+  <mdb-card-img [src]="product.imageHead?.path"
+                alt=""
+                class="product-img">
+  </mdb-card-img>
+
+  <mdb-card-body class="product-body">
+    <div>
+      <mdb-card-text class="category">
+        {{ product?.productType }}
+      </mdb-card-text>
+
+      <mdb-card-title>
+        <h4 class="title-4 product-name"
+            [routerLink]="'/product/' + product.barCode">
+          {{ product?.name }}
+        </h4>
+
+        <div class="col-spc-btwn-cntr card-footer">
+          <sh-product-price [price]="product.price"
+                            [isStock]="product.isInStock"
+                            [discount]="product.discount"
+                            [isSmall]="true">
+          </sh-product-price>
+
+          <div class="divider-horizontal"></div>
+
+          <sh-add-wish-list-compare-btns [isInWishList]="isInWishList"
+                                        [isSmall]="true"
+                                        [isTooltips]="true"
+                                        (wishListClickEmit)="wishListToggle()"
+                                        (compareClickEmit)="addToCompare()">
+          </sh-add-wish-list-compare-btns>
+        </div>
+
+      </mdb-card-title>
+    </div>
+  </mdb-card-body>
   <div class="add-btn-container flex-center-center">
-      <sh-add-cart-btn
-      [isInCart]="isInCart"
-      (clickEvent)="addInCartToggle()"
-      >
-      </sh-add-cart-btn>
+    <sh-add-cart-btn [isInCart]="isInCart"
+                      (clickEvent)="addInCartToggle()">
+    </sh-add-cart-btn>
   </div>
-</div>
+</mdb-card>
