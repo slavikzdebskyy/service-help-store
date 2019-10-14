@@ -6,6 +6,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class CurrencyPipe implements PipeTransform {
 
   public transform(value: number): string {
+    if (!value) {
+      return '';
+    }
     const space: string = ' ';
     if (Number.isInteger(value)) {
       return `$${space}${value}.00`;

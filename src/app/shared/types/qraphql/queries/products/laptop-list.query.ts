@@ -4,8 +4,20 @@ import gql from 'graphql-tag';
 export const GQL_QUERY_LAPTOP_LIST: DocumentNode = gql`
   query getAllLaptops {
     getAllLaptops {
+      images {
+        id
+        name
+        path
+      }
+      imageHead {
+        id
+        name
+        path
+      }
+      id
       barCode
       brand
+      name
       type
       color
       condition
@@ -26,11 +38,17 @@ export const GQL_QUERY_LAPTOP_LIST: DocumentNode = gql`
       driveSecondMemoryAmount
       options
       description
-      images
       buyStatus
       payStatus
       loacation
       seo
+      productType
+      createdAt
+      updatedAt
+      price
+      isInStock
+      discount
+      quantity
     }
   }
 `;
