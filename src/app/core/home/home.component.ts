@@ -1,17 +1,26 @@
-import { Component, OnInit, OnDestroy, ChangeDetectorRef, HostListener } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  HostListener,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
 import { Product } from '@service-help/models';
 import { Subscription } from 'rxjs';
 import { skipWhile } from 'rxjs/operators';
 import { ProductService } from 'src/app/services/product.service';
 import { Constants } from '@service-help/modules';
+import { Store } from '@ngrx/store';
+import { ProductsStoreActions, RootStoreState } from 'src/app/root-store';
 
 @Component({
   selector: 'sh-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements OnInit, OnDestroy {
-
   public readonly CAROUSEL_BREAKPOINT: number = 768;
   public readonly CHUNK_BREAKPOINT: number = 992;
   public carouselDisplayMode: string;
@@ -24,7 +33,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(
     private productService: ProductService,
     private changeDetection: ChangeDetectorRef,
-    ) {
+    private store$: Store<RootStoreState.State>,
+  ) {
     this.subsIds = new Subscription();
     this.slides = [];
     this.carouselDisplayMode = Constants.CAROUSEL_CONFIG.mode.multiple;
@@ -61,6 +71,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       .pipe(skipWhile((products: Product[]) => !products))
       .subscribe((products: Product[]) => {
         this.products = products;
+        this.store$.dispatch(new ProductsStoreActions.AddProducts(products));
         this.onWindowResize();
       });
     this.subsIds.add(subsId);
@@ -72,5 +83,4 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.slides.push(this.products.slice(i, i + chunkSize));
     }
   }
-
 }

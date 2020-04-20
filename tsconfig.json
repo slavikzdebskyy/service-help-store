@@ -39,6 +39,9 @@
       ],
       "@service-help/services": [
         "src/app/services/index.ts"
+      ],
+      "@service-help/utils": [
+        "src/app/shared/utils/index.ts"
       ]
     }
   }
