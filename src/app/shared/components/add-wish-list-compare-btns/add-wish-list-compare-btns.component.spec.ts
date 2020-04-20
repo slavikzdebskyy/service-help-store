@@ -10,6 +10,7 @@ describe('AddWishListCompareBtnsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [AddWishListCompareBtnsComponent],
+
       imports: [
         TranslateModule.forRoot(),
         MatTooltipModule,
