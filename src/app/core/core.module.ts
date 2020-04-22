@@ -1,9 +1,15 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MDBBootstrapModule, CarouselModule } from 'angular-bootstrap-md';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+// import {SWIPER_CONFIG, SwiperConfigInterface, SwiperModule} from "ngx-swiper-wrapper";
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+
+// const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+//   direction: 'horizontal',
+//   slidesPerView: 'auto'
+// };
 
   //  Modules
 import { ProductListModule, ProductModule, MaterialModule } from '@service-help/modules';
@@ -33,7 +39,7 @@ import { HomeComponent } from './home/home.component';
     SharedModule,
     MDBBootstrapModule.forRoot(),
     MaterialModule,
-    // CarouselModule,
+    // SwiperModule,
   ],
   declarations: [
     LayoutComponent,
@@ -42,5 +48,8 @@ import { HomeComponent } from './home/home.component';
     NavigationBarComponent,
     HomeComponent,
   ],
+  // providers: [
+  //   { provide: SWIPER_CONFIG, useValue: DEFAULT_SWIPER_CONFIG },
+  //   ]
 })
 export class CoreModule { }
