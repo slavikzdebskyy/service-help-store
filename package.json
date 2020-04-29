@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --liveReload=false -o",
     "build": "ng build",
     "test": "ng test",
     "test:dev": "ng test --karma-config ./src/karma.dev.conf.js",

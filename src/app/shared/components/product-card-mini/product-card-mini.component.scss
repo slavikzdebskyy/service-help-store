@@ -53,11 +53,11 @@ $imgSize: 250px;
     background: $color-main-1;
     transform: translateY(0%);
     transition: 0.2s all;
-    z-index: 2;
+    z-index: 20; // need for swiper
   }
 
   &-footer {
-    z-index: 3;
+    z-index: 21; // need for swiper
     background-color: $color-main-2;
   }
 

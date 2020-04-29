@@ -1,5 +1,11 @@
-@import '../../../assets/themes/variables';
 
 .home-container {
-  background-color: $color-main-2;
+  min-height: 500px;
+}
+
+::ng-deep {
+  .swiper-slide, .swiper {
+    overflow: visible !important;
+  }
+
 }

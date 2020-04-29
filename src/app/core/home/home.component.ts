@@ -2,7 +2,6 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  HostListener,
   OnDestroy,
   OnInit,
 } from '@angular/core';
@@ -10,23 +9,20 @@ import { Product } from '@service-help/models';
 import { Subscription } from 'rxjs';
 import { skipWhile } from 'rxjs/operators';
 import { ProductService } from 'src/app/services/product.service';
-import { Constants } from '@service-help/modules';
 import { Store } from '@ngrx/store';
 import { ProductsStoreActions, RootStoreState } from 'src/app/root-store';
+import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { HOME_SWIPER_CONFIG } from './swiper.config';
 
 @Component({
   selector: 'sh-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [{ provide: SWIPER_CONFIG, useValue: HOME_SWIPER_CONFIG }],
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  public readonly CAROUSEL_BREAKPOINT: number = 768;
-  public readonly CHUNK_BREAKPOINT: number = 992;
-  public carouselDisplayMode: string;
-
   public products: Product[];
-  public slides: Product[][];
 
   private subsIds: Subscription;
 
@@ -36,33 +32,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     private store$: Store<RootStoreState.State>,
   ) {
     this.subsIds = new Subscription();
-    this.slides = [];
-    this.carouselDisplayMode = Constants.CAROUSEL_CONFIG.mode.multiple;
     this.products = [];
   }
 
   public ngOnInit(): void {
     this.initProducts();
-    this.onWindowResize();
   }
 
   public ngOnDestroy(): void {
     this.subsIds.unsubscribe();
-  }
-
-  @HostListener('window:resize')
-  public onWindowResize(): void {
-    if (window.innerWidth <= Constants.CAROUSEL_CONFIG.breakpointMode) {
-      this.carouselDisplayMode = Constants.CAROUSEL_CONFIG.mode.single;
-    } else {
-      this.carouselDisplayMode = Constants.CAROUSEL_CONFIG.mode.multiple;
-    }
-    if (window.innerWidth <= Constants.CAROUSEL_CONFIG.chunkMode) {
-      this.chunk(3);
-    } else {
-      this.chunk(4);
-    }
-    this.changeDetection.markForCheck();
   }
 
   private initProducts(): void {
@@ -72,15 +50,8 @@ export class HomeComponent implements OnInit, OnDestroy {
       .subscribe((products: Product[]) => {
         this.products = products;
         this.store$.dispatch(new ProductsStoreActions.AddProducts(products));
-        this.onWindowResize();
       });
     this.subsIds.add(subsId);
   }
 
-  private chunk(chunkSize: number): void {
-    this.slides = [];
-    for (let i: number = 0; i < this.products.length; i += chunkSize) {
-      this.slides.push(this.products.slice(i, i + chunkSize));
-    }
-  }
 }

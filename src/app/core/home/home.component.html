@@ -1,29 +1,13 @@
-<section class="text-center pb-3 my-5">
-  <mdb-carousel [animation]="'slide'"
-                [ngSwitch]="carouselDisplayMode"
-                [isControls]="false"
-                class="carousel-multi-item multi-animation"
-                [type]="'carousel-multi-item'"
-                [interval]="'2000'">
-    <ng-container *ngSwitchCase="'single'">
-      <mdb-carousel-item *ngFor="let card of products">
-          <sh-product-card-mini
-            [product]="card">
-          </sh-product-card-mini>
-      </mdb-carousel-item>
-    </ng-container>
+<div
+  *ngIf="products?.length"
+  class="home-container py-20 px-16">
+  <swiper>
+    <div *ngFor="let product of products" class="swiper-slide">
+      <sh-product-card-mini [product]="product"></sh-product-card-mini>
+    </div>
+  </swiper>
+</div>
 
-    <ng-container *ngSwitchCase="'multiple'">
-      <mdb-carousel-item *ngFor="let item of slides">
-        <div class="col-md-3" *ngFor="let card of item; let cardIndex = index" >
-            <sh-product-card-mini
-              [product]="card">
-            </sh-product-card-mini>
-        </div>
-      </mdb-carousel-item>
-    </ng-container>
-  </mdb-carousel>
-</section>
 
 
 
