@@ -10,13 +10,14 @@
       "prefix": "sh",
       "schematics": {
         "@schematics/angular:component": {
-          "styleext": "scss"
+          "style": "scss"
         }
       },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/service-help-store",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -44,6 +45,12 @@
           },
           "configurations": {
             "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -139,5 +146,8 @@
       }
     }
   },
-  "defaultProject": "service-help-store"
+  "defaultProject": "service-help-store",
+  "cli": {
+    "analytics": "0d2d1d46-b60f-43d8-a749-a292e65229ec"
+  }
 }

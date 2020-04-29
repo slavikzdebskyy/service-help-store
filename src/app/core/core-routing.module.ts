@@ -1,14 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-  //  Modules
-import { Constants } from './../modules/constants/constants.module';
-
-  //  Components
+import { Constants } from '@service-help/modules';
 import { HomeComponent } from './home/home.component';
-
-  //  Services
-import { Route } from '../services/router.service';
+import { Route } from '@service-help/services';
 
 const routes: Routes = Route.withLayout([
   {

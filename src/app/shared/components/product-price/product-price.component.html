@@ -1,28 +1,21 @@
 <div
-  class="row-spc-btwn-cntr price-container"
-  [class.small]="isSmall"
-  *ngIf="!discountPrice">
-  <span class="price" [class.small]="isSmall">
-    {{ price | currency }}
-  </span>
+  class="price flex justify-content-start align-items-center"
+  [class.small]="isSmall">
   <span
-    class="in-stock"
-    *ngIf="!isSmall && isStock">
-    {{ 'PRICE.in_stock' | translate }}
+    class="price-curr"
+    [class.small]="isSmall"
+    [class.mr-8]="discountPrice">
+      {{ discountPrice || price | currency }}
   </span>
-</div>
-<div
-  class="row-spc-btwn-cntr price-container"
-  [class.small]="isSmall"
-  *ngIf="discountPrice">
-  <span class="price">
-    {{ discountPrice | currency }}
-  </span>
-  <span class="old-price">
-    {{ price | currency }}
-  </span>
+  <div *ngIf="discountPrice">
+    <span
+      class="price-old"
+      [class.small]="isSmall">
+        {{ price | currency }}
+    </span>
+  </div>
   <span
-    class="in-stock"
+    class="price-label-in-stock"
     *ngIf="!isSmall && isStock">
     {{ 'PRICE.in_stock' | translate }}
   </span>

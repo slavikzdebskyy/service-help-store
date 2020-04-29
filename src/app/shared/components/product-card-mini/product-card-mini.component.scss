@@ -1,83 +1,72 @@
 @import '../../../../assets/themes/variables';
 
-.product-cart-container {
-  box-shadow: 0px 0px 0px 0px $color-main-5,
-              0px 0px 0px 1px $color-main-5;
-  transition: 0.2s all;
-  margin: 15px;
-  position: relative;
-  padding: 0;
+$imgSize: 250px;
 
-  .add-btn-container {
-    position: absolute;
-    left: 0px;
-    right: 0px;
+.card-mini {
+  width: 260px;
+  box-shadow: 0 0 0 0 $color-main-5,
+  0 0 0 1px $color-main-5;
+  transition: 0.2s all;
+  background-color: $color-main-2;
+  z-index: 3;
+
+  &-img {
+    width: $imgSize;
+    height: $imgSize;
+
+    &-discount {
+      top:15px;
+      right:15px;
+      z-index: 1;
+      background-color: $color-main-2;
+      color: $color-main-3;
+      border: 2px solid $color-main-3;
+      padding: 2px 10px;
+      font-size: $font-size-12px;
+      font-weight: $font-weight-semi-bold;
+    }
+  }
+
+  &-body {
+    height: 85px;
+    background-color: $color-main-2;
+    &-category {
+      font-size: $font-size-12px;
+      color: $color-main-8;
+      text-transform: uppercase;
+    }
+
+    &-name {
+      font-size: $font-size-14px;
+      color: $color-main-6;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+  &-add-btn {
+    left: 0;
+    right: 0;
     bottom: 1px;
     padding: 15px;
     background: $color-main-1;
     transform: translateY(0%);
     transition: 0.2s all;
-    z-index: 2;
+    z-index: 20; // need for swiper
+  }
+
+  &-footer {
+    z-index: 21; // need for swiper
+    background-color: $color-main-2;
   }
 
   &:hover {
-    box-shadow: 0px 0px 6px 0px $color-main-5,
-                0px 0px 0px 2px $color-main-3;
+    box-shadow: 0 0 6px 0 $color-main-5,
+    0 0 0 2px $color-main-3;
 
-    .add-btn-container {
+    .card-mini-add-btn {
       transform: translateY(100%);
     }
   }
 }
-
-.product-label {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-
-.label-discount {
-  background-color: $color-main-2;
-  color: $color-main-3;
-  border: 2px solid $color-main-3;
-  padding: 2px 10px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.category {
-  text-transform: uppercase;
-  font-size: 12px;
-  color: $color-main-8;
-  text-align: center;
-  padding: 15px 15px 0;
-}
-
-.product-name {
-  cursor: pointer;
-  margin: 0 20px 10px;
-  text-align: center;
-  &:hover {
-    color: $color-main-3,
-  }
-}
-
-.product-body  {
-  background-color: $color-main-2;
-  position: relative;
-  z-index: 20;
-  padding: 0 15px 15px;
-}
-
-.product-img {
-  padding: 5px;
-}
-
-.card-footer {
-  background-color: $color-main-2;
-  border: none;
-  padding: 0;
-}
-
-
-

@@ -1,5 +1,4 @@
 import { Action } from '@ngrx/store';
-
 import { IProductResponse } from '@service-help/interfaces';
 
 export const enum ActionTypes {

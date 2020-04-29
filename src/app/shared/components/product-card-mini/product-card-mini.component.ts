@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Product } from '@service-help/models';
-import { environment } from './../../../../environments/environment';
 
 @Component({
   selector: 'sh-product-card-mini',

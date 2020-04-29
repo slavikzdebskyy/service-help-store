@@ -1,6 +1,5 @@
 import { IImage } from './image.interface';
-import { ProductType } from '../enums/product-type.enum';
-import { PayStatus, BuyStatus } from '@service-help/enums';
+import { PayStatus, BuyStatus, ProductType } from '@service-help/enums';
 
 export interface IProduct {
   barCode: string;
