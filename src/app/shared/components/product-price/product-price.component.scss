@@ -1,36 +1,30 @@
 @import '../../../../assets/themes/variables';
 
-.price-container {
-  justify-content: flex-start;
-}
-
 .price {
-  font-size: 24px;
-  margin: 10px 10px 15px 0;
-  font-weight: 700;
-  color: $color-main-3;
-}
-
-.old-price {
-  font-size: 18px;
-  font-weight: 400;
-  color: $color-main-8;
-  text-decoration: line-through;
-}
-
-.in-stock {
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-left: 30px;
-  color: $color-main-3;
-}
-
-.small {
-  .price {
-    font-size: 18px;
+  &-curr {
+    font-size: $font-size-24px;
+    font-weight: $font-weight-bold;
+    color: $color-main-3;
+    &.small {
+      font-size: $font-size-18px;
+    }
   }
-  .old-price {
-    font-size: 12px;
+
+  &-old {
+    font-size: $font-size-18px;
+    font-weight: $font-weight-normal;
+    color: $color-main-8;
+    text-decoration: line-through;
+    &.small {
+      font-size: $font-size-12px;
+    }
+  }
+
+  &-label-in-stock {
+    font-size: $font-size-12px;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    margin-left: 30px;
+    color: $color-main-3;
   }
 }

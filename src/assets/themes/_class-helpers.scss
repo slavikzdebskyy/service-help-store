@@ -31,7 +31,7 @@
 $util-range-to: 120;
 
 // Dimensions and indents in the ascira design system are multiples of 4 or 8
-$multiple-number: 4;
+$multiple-number: 2;
 
 @function increment-by-4($i, $unit) {
   @return $i + $unit;
