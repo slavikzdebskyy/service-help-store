@@ -1,8 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ProductCardMiniComponent } from './product-card-mini.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { PipesModule } from './../../pipes/pipes.module';
+import { PipesModule } from '../../pipes/pipes.module';
 
 describe('ProductCardMiniComponent', () => {
   let component: ProductCardMiniComponent;

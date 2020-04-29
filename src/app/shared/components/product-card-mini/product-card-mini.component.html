@@ -1,12 +1,12 @@
 <div class="card-mini flex flex-column position-relative">
   <div class="card-mini-img position-relative flex align-items-center justify-content-center px-8 py-6">
     <span
-      *ngIf="product.discount"
+      *ngIf="product?.discount"
       class="card-mini-img-discount position-absolute">
        {{ product.discount | discount }}
     </span>
     <img
-      [src]="product.imageHead?.path"
+      [src]="product?.imageHead?.path"
       class="w-100"
       alt="img">
   </div>
@@ -15,13 +15,13 @@
       {{ product?.productType }}
     </div>
     <h4 class="card-mini-body-name"
-        [routerLink]="'/product/' + product.barCode">
+        [routerLink]="'/product/' + product?.barCode">
       {{ product?.name }}
     </h4>
     <sh-product-price
-      [price]="product.price"
-      [isStock]="product.isInStock"
-      [discount]="product.discount"
+      [price]="product?.price"
+      [isStock]="product?.isInStock"
+      [discount]="product?.discount"
       [isSmall]="true">
     </sh-product-price>
   </div>
