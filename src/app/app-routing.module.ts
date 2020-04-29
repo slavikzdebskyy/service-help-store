@@ -10,15 +10,15 @@ import { AuthModule } from './auth/auth.module';
 const routes: Routes = [
   {
     path: Constants.ROUTERS.EMPTY,
-    loadChildren: './core/core.module#CoreModule',
+    loadChildren: (): any => import('./core/core.module').then((m: any) => m.CoreModule),
   },
   {
     path: Constants.ROUTERS.PRODUCT,
-    loadChildren: './modules/product/product.module#ProductModule',
+    loadChildren: (): any => import('./modules/product/product.module').then((m: any) => m.ProductModule),
   },
   {
     path: Constants.ROUTERS.EMPTY,
-    loadChildren: './modules/product-list/product-list.module#ProductListModule',
+    loadChildren: (): any => import('./modules/product-list/product-list.module').then((m: any) => m.ProductListModule),
   },
   {
     path: '**',
