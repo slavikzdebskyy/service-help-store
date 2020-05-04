@@ -1,0 +1,9 @@
+<div *ngIf="!hasBackdrop; else withBackdrop">
+  <div class="triple-spinner" [ngClass]="size"></div>
+</div>
+
+<ng-template #withBackdrop>
+  <div class="backdrop flex justify-content-center align-items-center position-fixed w-100 h-100">
+    <div class="triple-spinner" [ngClass]="size"></div>
+  </div>
+</ng-template>

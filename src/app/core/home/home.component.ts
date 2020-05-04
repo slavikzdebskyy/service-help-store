@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   constructor(
     private productService: ProductService,
-    private changeDetection: ChangeDetectorRef,
+    private cdRef: ChangeDetectorRef,
     private store$: Store<RootStoreState.State>,
   ) {
     this.subsIds = new Subscription();
@@ -49,6 +49,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       .pipe(skipWhile((products: Product[]) => !products))
       .subscribe((products: Product[]) => {
         this.products = products;
+        this.cdRef.markForCheck();
         this.store$.dispatch(new ProductsStoreActions.AddProducts(products));
       });
     this.subsIds.add(subsId);

@@ -6,7 +6,7 @@ import { DEFAULT_SWIPER_CONFIG } from './swiper.config';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ProductListModule, ProductModule, MaterialModule } from '@service-help/modules';
+import { ProductListModule, ProductModule, MaterialModule, LoaderModule } from '@service-help/modules';
 import { ComponentsModule } from '@service-help/components';
 import { CoreRoutingModule } from './core-routing.module';
 import { SharedModule } from '../shared/shared.module';
@@ -32,6 +32,7 @@ import { HomeComponent } from './home/home.component';
     MDBBootstrapModule.forRoot(),
     MaterialModule,
     SwiperModule,
+    LoaderModule,
   ],
   declarations: [
     LayoutComponent,
