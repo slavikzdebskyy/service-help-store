@@ -10,7 +10,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
   //  Modules
-import { RootStoreModule } from './root-store/root-store.module';
+import { RootStoreModule } from './root-store';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { GraphQLModule } from './graphql.module';
@@ -26,7 +26,7 @@ export const httpLoaderFactory: any = (http: HttpClient): any => {
     AppComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
