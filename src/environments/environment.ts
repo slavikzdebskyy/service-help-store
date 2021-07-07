@@ -2,8 +2,10 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
+export const environment: any = {
   production: false,
+  graphqlURL: 'http://localhost:3000/api/graphql',
+  apiURL: 'http://localhost:3000/api',
 };
 
 /*

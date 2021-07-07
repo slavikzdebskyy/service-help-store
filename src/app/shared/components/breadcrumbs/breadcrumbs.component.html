@@ -1,0 +1,10 @@
+<div class="breadcrumbs-container">
+  <ul class="bc-list">
+    <li
+      class="bc-list-item"
+      *ngFor="let item of breadCrumbs"
+      [routerLink]="item.route">
+      {{item.name}}
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,11 @@
+
+.home-container {
+  min-height: 500px;
+}
+
+::ng-deep {
+  .swiper-slide, .swiper {
+    overflow: visible !important;
+  }
+
+}

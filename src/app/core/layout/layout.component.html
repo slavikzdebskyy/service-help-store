@@ -1,0 +1,20 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="over" [opened]="isSideNavOpened">
+    Sidenav content
+    <span
+      class="info-item mobile-menu"
+      (click)="toggleSideNav()"
+    >
+      <i class="fas fa-bars"></i>
+    </span>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <sh-header
+      (openSideNav)="toggleSideNav($event)"
+    >
+  </sh-header>
+  <sh-navigation-bar></sh-navigation-bar>
+    <router-outlet></router-outlet>
+    <sh-footer></sh-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

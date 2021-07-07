@@ -1,0 +1,38 @@
+{
+  "CONTACTS": {
+    "main_phone_number": "+38 (050)123 45 67",
+    "main_email": "qaz@qaz.com",
+    "location": "Lviv, Street, 123/12"
+  },
+  "PROFILE": {
+    "language": "Language",
+    "my_profile": "My profile"
+  },
+  "SEARCH": {
+    "search_ph": "Search ...",
+    "search": "Search",
+    "your_wishlist": "Your Wishlist",
+    "your_cart": "Your Cart"
+  },
+  "CATEGORIES": {
+    "select_category": "Select category",
+    "all_categories": "All Categories",
+    "discounts": "Discounts",
+    "pc": "PC",
+    "laptops": "Laptops",
+    "monitors": "Monitors",
+    "home": "Home",
+    "accessories": "Accessories"
+  },
+  "PRICE": {
+    "in_stock": "in stock"
+  },
+  "BUTTONS": {
+    "remove_from_cart": "Remove from cart",
+    "add_to_cart": "Add to cart",
+    "add_to_wish_list": "Add to wish list",
+    "remove_from_wish_list": "Remove from wish list",
+    "add_to_compare": "Add to compare",
+    "quick_view": "Quick view"
+  }
+}

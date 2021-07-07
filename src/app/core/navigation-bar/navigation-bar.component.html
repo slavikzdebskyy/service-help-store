@@ -1,0 +1,58 @@
+<nav class="nav-bar">
+  <ul class="links-list">
+    <li class="info-item link-item"
+        [routerLink]="routes.HOME"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact: true}"
+      >
+      <span>
+        {{ 'CATEGORIES.home' | translate }}
+      </span>
+    </li>
+    <li class="info-item link-item"
+        [routerLink]="'/' + routes.LAPTOPS"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact: true}"
+      >
+      <span>
+        {{ 'CATEGORIES.laptops' | translate }}
+      </span>
+    </li>
+    <li class="info-item link-item"
+        [routerLink]="'/' + routes.PC"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact: true}"
+      >
+      <span>
+        {{ 'CATEGORIES.pc' | translate }}
+      </span>
+    </li>
+    <li class="info-item link-item"
+        [routerLink]="'/' + routes.MONITORS"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact: true}"
+      >
+      <span>
+        {{ 'CATEGORIES.monitors' | translate }}
+      </span>
+    </li>
+    <li class="info-item link-item"
+        [routerLink]="'/' + routes.ACCESSORIES"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact: true}"
+      >
+      <span>
+        {{ 'CATEGORIES.accessories' | translate }}
+      </span>
+    </li>
+    <li class="info-item link-item"
+        [routerLink]="'/' + routes.DISCOUNTS"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact: true}"
+      >
+      <span>
+        {{ 'CATEGORIES.discounts' | translate }}
+      </span>
+    </li>
+  </ul>
+</nav>

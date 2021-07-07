@@ -1,0 +1,18 @@
+<div *ngIf="products?.length; else loader" class="home-container py-20 px-16">
+  <swiper>
+    <div *ngFor="let product of products" class="swiper-slide">
+      <sh-product-card-mini [product]="product"></sh-product-card-mini>
+    </div>
+  </swiper>
+</div>
+
+<ng-template #loader>
+  <div class="home-container flex justify-content-center align-items-center py-20 px-16">
+    <sh-loader></sh-loader>
+  </div>
+</ng-template>
+
+
+
+
+

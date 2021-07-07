@@ -1,0 +1,60 @@
+// Colors
+$color-main-1: #1e1f29 !default;
+$color-main-2: #fff !default;
+$color-main-3: #D10024 !default;
+$color-main-4: #15161D !default;
+$color-main-5: #E4E7ED !default;
+$color-main-6: #2B2D42 !default;
+$color-main-7: #FBFBFC !default;
+$color-main-8: #8D99AE !default;
+$color-main-9: #ef233c !default;
+$color-main-10: #33cc33 !default;
+$color-main-11: #333333 !default;
+
+/* footer colors */
+$color-1: #b9babc !default;
+
+/* Font-size */
+$font-size-10px: .625rem !default; /* 10px */
+$font-size-12px: .75rem !default; /* 12px */
+$font-size-14px: 0.875rem !default; /* 14px */
+$font-size-16px: 1rem !default; /* 16px */
+$font-size-18px: 1.125rem !default; /* 18px */
+$font-size-24px: 1.5rem !default; /* 24px */
+$font-size-30px: 1.875rem !default; /* 30px */
+$font-size-36px: 2.25rem !default; /* 36px */
+
+/* Font-weight */
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
+
+/* line-height */
+$line-height-sm: 1.25 !default; // 20
+$line-height-xs: 1 !default; // 16
+$line-height-lg: 2 !default; // 32
+$line-height-base: 1.5 !default; // 24
+$line-height-1-75: 1.75 !default;
+
+// OLD
+$line-height-14px: 0.875rem;
+$line-height-16px: 1rem;
+$line-height-18px: 1.125rem;
+
+// OLD
+$font-weight400: 400;
+$font-weight500: 500;
+
+
+//  Media break points
+$break-tiny: 480px;
+$break-small: 600px;
+$break-medium: 800px;
+$break-large: 960px;
+
+// image sizes
+$swiper-mini-size: 120px;

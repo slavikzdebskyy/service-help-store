@@ -1,0 +1,22 @@
+<div
+  class="price flex justify-content-start align-items-center"
+  [class.small]="isSmall">
+  <span
+    class="price-curr"
+    [class.small]="isSmall"
+    [class.mr-8]="discountPrice">
+      {{ discountPrice || price | currency }}
+  </span>
+  <div *ngIf="discountPrice">
+    <span
+      class="price-old"
+      [class.small]="isSmall">
+        {{ price | currency }}
+    </span>
+  </div>
+  <span
+    class="price-label-in-stock"
+    *ngIf="!isSmall && isStock">
+    {{ 'PRICE.in_stock' | translate }}
+  </span>
+</div>
